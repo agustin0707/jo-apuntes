@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obstetricia · Resumen Internado · Mayo 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Paper & ink */
+    --paper: #faf5ea;
+    --paper-dark: #f0e7d0;
+    --ink: #1f1a12;
+    --ink-light: #4d4030;
+    --rule: #c4b18d;
+    --rule2: #e8dcbf;
+    --margin: #c89597;
+
+    /* Primary scale — deep navy slate */
+    --pc: #1c3454;
+    --pm: #345a8a;
+    --pv: #5b85bd;
+    --pl: #a8c1e0;
+
+    /* Accents */
+    --red: #a8423d;
+    --orange: #c47d2b;
+    --green: #4f7c4d;
+    --teal: #3a7a76;
+    --purple: #7c5c9c;
+    --rose: #b06070;
+    --gold: #b08838;
+
+    /* Highlights */
+    --hl: #f5e07a;
+    --hlp: #e3d5e8;
+    --hlb: #d6e3f0;
+    --hlg: #d8eadb;
+    --hlr: #f2d6d4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: linear-gradient(180deg,#1d2a3a 0%, #243144 100%); min-height:100vh; font-family: 'Inter', sans-serif; padding: 40px 20px; }
+
+  /* COVER */
+  .cover { max-width: 880px; margin: 0 auto; background: linear-gradient(135deg, var(--pc) 0%, #2a4870 100%); border-radius: 6px 6px 0 0; padding: 48px 60px; color: white; position: relative; overflow: hidden; }
+  .cover::before { content:''; position:absolute; top:-60px; right:-60px; width:280px; height:280px; background:radial-gradient(circle, rgba(176,136,56,.22) 0%, rgba(176,136,56,0) 70%); border-radius:50%; }
+  .cover::after { content:''; position:absolute; bottom:-80px; left:-30px; width:220px; height:220px; background:radial-gradient(circle, rgba(91,133,189,.22) 0%, rgba(91,133,189,0) 70%); border-radius:50%; }
+  .cover-label { font-size:11px; letter-spacing:5px; text-transform:uppercase; opacity:.65; margin-bottom:14px; font-weight:500; position:relative; z-index:2; }
+  .cover-title { font-family:'Fraunces',serif; font-size:54px; font-weight:800; line-height:1; letter-spacing:-2.5px; margin-bottom:8px; position:relative; z-index:2; }
+  .cover-title span { color:var(--gold); font-style:italic; font-weight:600; }
+  .cover-sub { font-size:17px; opacity:.78; margin-bottom:8px; max-width:600px; line-height:1.4; position:relative; z-index:2; }
+  .cover-meta { font-size:11px; opacity:.5; margin-bottom:22px; font-style:italic; position:relative; z-index:2; }
+  .cover-chips { display:flex; flex-wrap:wrap; gap:6px; position:relative; z-index:2; }
+  .chip { background:rgba(168,193,224,.15); border:1px solid rgba(168,193,224,.3); border-radius:20px; padding:5px 13px; font-size:11.5px; font-weight:500; backdrop-filter:blur(2px); }
+  .chip.gold { background:rgba(176,136,56,.18); border-color:rgba(176,136,56,.4); }
+  .chip.red { background:rgba(168,66,61,.22); border-color:rgba(168,66,61,.45); }
+  .chip.rose { background:rgba(176,96,112,.22); border-color:rgba(176,96,112,.45); }
+
+  /* NOTEBOOK */
+  .notebook { max-width:880px; margin:0 auto; background:var(--paper); border-radius:0 0 6px 6px; box-shadow:0 25px 70px rgba(0,0,0,.4); position:relative; overflow:hidden; }
+  .notebook::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background-image:repeating-linear-gradient(transparent,transparent 31px,var(--rule2) 31px,var(--rule2) 32px); pointer-events:none; z-index:0; opacity:.65; }
+  .notebook::after { content:''; position:absolute; top:0; left:72px; bottom:0; width:1.5px; background:var(--margin); pointer-events:none; z-index:1; opacity:.7; }
+  .page { position:relative; z-index:2; padding:42px 48px 60px 92px; }
+
+  /* SECTION HEADER */
+  .sh { display:flex; align-items:center; gap:12px; margin:48px 0 16px; }
+  .sh:first-child { margin-top:0; }
+  .sn { font-family:'Fraunces',serif; font-size:11px; font-weight:800; letter-spacing:2.5px; color:white; padding:5px 10px; border-radius:4px; white-space:nowrap; }
+  .sn-p{background:var(--pc);} .sn-c{background:var(--purple);} .sn-g{background:var(--green);}
+  .sn-o{background:var(--orange);} .sn-t{background:var(--teal);} .sn-r{background:var(--red);}
+  .sn-rs{background:var(--rose);} .sn-gd{background:var(--gold);}
+  .st { font-family:'Fraunces',serif; font-size:23px; font-weight:700; letter-spacing:-.4px; border-bottom:2px solid var(--rule); padding-bottom:5px; flex:1; line-height:1.15; }
+  .st-p{color:var(--pc);} .st-c{color:var(--purple);} .st-g{color:var(--green);}
+  .st-o{color:var(--orange);} .st-t{color:var(--teal);} .st-r{color:var(--red);}
+  .st-rs{color:var(--rose);} .st-gd{color:var(--gold);}
+
+  hr.d { border:none; border-top:2px solid var(--rule); margin:38px 0; opacity:.6; }
+
+  .bt { font-size:13px; line-height:1.75; color:var(--ink-light); margin-bottom:10px; }
+  .hl  { background:var(--hl); padding:1px 4px; border-radius:2px; box-decoration-break:clone; }
+  .hlp { background:var(--hlp); color:var(--pc); font-weight:600; padding:1px 4px; border-radius:2px; }
+  .hlg { background:var(--hlg); color:var(--green); font-weight:600; padding:1px 4px; border-radius:2px; }
+  .hlr { background:var(--hlr); color:var(--red); font-weight:600; padding:1px 4px; border-radius:2px; }
+  .hlb { background:var(--hlb); color:var(--pc); font-weight:600; padding:1px 4px; border-radius:2px; }
+
+  /* QUOTE */
+  .q { border-left:4px solid var(--pl); padding:11px 18px; background:rgba(168,193,224,.16); border-radius:0 6px 6px 0; margin:14px 0; }
+  .q-t { font-family:'Caveat',cursive; font-size:21px; color:var(--ink); line-height:1.4; }
+  .q-a { font-size:10px; color:#988866; letter-spacing:1px; text-transform:uppercase; margin-top:4px; font-weight:500; }
+  .q.green { border-left-color:var(--green); background:rgba(79,124,77,.1); }
+  .q.red { border-left-color:var(--red); background:rgba(168,66,61,.1); }
+  .q.orange { border-left-color:var(--orange); background:rgba(196,125,43,.1); }
+  .q.teal { border-left-color:var(--teal); background:rgba(58,122,118,.1); }
+  .q.purple { border-left-color:var(--purple); background:rgba(124,92,156,.1); }
+  .q.rose { border-left-color:var(--rose); background:rgba(176,96,112,.1); }
+  .q.gold { border-left-color:var(--gold); background:rgba(176,136,56,.1); }
+
+  /* CONCEPT BOX */
+  .cb { background:var(--paper-dark); border:1.5px solid var(--rule); border-radius:7px; padding:14px 18px; margin:11px 0; }
+  .cb-p{border-left:4px solid var(--pc);} .cb-c{border-left:4px solid var(--purple);}
+  .cb-g{border-left:4px solid var(--green);} .cb-o{border-left:4px solid var(--orange);}
+  .cb-t{border-left:4px solid var(--teal);} .cb-r{border-left:4px solid var(--red);}
+  .cb-rs{border-left:4px solid var(--rose);} .cb-gd{border-left:4px solid var(--gold);}
+  .cl { font-family:'Fraunces',serif; font-size:10.5px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:5px; }
+  .cl-p{color:var(--pc);} .cl-c{color:var(--purple);} .cl-g{color:var(--green);}
+  .cl-o{color:var(--orange);} .cl-t{color:var(--teal);} .cl-r{color:var(--red);}
+  .cl-rs{color:var(--rose);} .cl-gd{color:var(--gold);}
+  .cd { font-family:'Fraunces',serif; font-size:15px; font-weight:600; color:var(--ink); line-height:1.4; margin-bottom:5px; }
+  .cc { font-size:12.5px; line-height:1.7; color:var(--ink-light); }
+
+  /* ALERTA / ANALOGY */
+  .ab { background:#fdf6dc; border:1.5px dashed var(--gold); border-radius:7px; padding:13px 17px; margin:11px 0; display:flex; gap:11px; }
+  .ai { font-size:18px; flex-shrink:0; margin-top:2px; }
+  .at { font-size:12.5px; line-height:1.7; color:#5a4825; flex:1; }
+  .ab.red { background:#fbeae8; border-color:var(--red); }
+  .ab.red .at { color:#7a2622; }
+  .ab.green { background:#eaf2e8; border-color:var(--green); }
+  .ab.green .at { color:#284828; }
+  .ab.teal { background:#e6f0ee; border-color:var(--teal); }
+  .ab.teal .at { color:#1f4845; }
+  .ab.purple { background:#ede5f3; border-color:var(--purple); }
+  .ab.purple .at { color:#3e2956; }
+
+  /* CLAVE CLÍNICA */
+  .tb { background:rgba(168,193,224,.18); border:2px solid var(--pv); border-radius:8px; padding:14px 18px; margin:13px 0; }
+  .tl { font-family:'Fraunces',serif; font-size:11px; color:var(--pc); font-weight:800; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:6px; }
+  .tb p { font-size:12.5px; color:var(--ink); line-height:1.7; }
+
+  /* BULLET LIST */
+  .bl { list-style:none; display:flex; flex-direction:column; gap:6px; margin:8px 0; }
+  .bl li { font-size:12.5px; color:var(--ink-light); padding-left:17px; position:relative; line-height:1.55; }
+  .bl li::before { content:'›'; position:absolute; left:0; color:var(--pv); font-size:14px; top:-1px; font-weight:700; }
+  .bl li strong { color:var(--ink); font-weight:600; }
+  .bl.tight { gap:3px; }
+  .bl.tight li { font-size:12px; }
+  .bl.green li::before { color:var(--green); }
+  .bl.red li::before { color:var(--red); }
+  .bl.orange li::before { color:var(--orange); }
+  .bl.teal li::before { color:var(--teal); }
+  .bl.purple li::before { color:var(--purple); }
+  .bl.rose li::before { color:var(--rose); }
+  .bl.gold li::before { color:var(--gold); }
+
+  /* GRIDS */
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:11px; margin:11px 0; }
+  .three { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin:11px 0; }
+
+  /* TABLES */
+  .pt { width:100%; border-collapse:collapse; margin:11px 0; font-size:12px; background:rgba(255,250,238,.5); border-radius:7px; overflow:hidden; }
+  .pt thead tr { background:var(--pc); color:white; }
+  .pt.green thead tr { background:var(--green); }
+  .pt.orange thead tr { background:var(--orange); }
+  .pt.teal thead tr { background:var(--teal); }
+  .pt.red thead tr { background:var(--red); }
+  .pt.purple thead tr { background:var(--purple); }
+  .pt.rose thead tr { background:var(--rose); }
+  .pt.gold thead tr { background:var(--gold); }
+  .pt th { padding:9px 13px; font-family:'Fraunces',serif; font-size:10.5px; font-weight:700; letter-spacing:1px; text-align:left; text-transform:uppercase; }
+  .pt td { padding:8px 13px; border-bottom:1px solid var(--rule2); color:var(--ink-light); vertical-align:top; line-height:1.5; }
+  .pt tr:last-child td { border-bottom:none; }
+  .pt tr:nth-child(even) td { background:rgba(91,133,189,.05); }
+  .pt td:first-child { font-weight:600; color:var(--ink); }
+  .pt.full td:first-child { width:28%; }
+
+  /* FLOW / STEPS */
+  .flow-row { display:flex; align-items:stretch; gap:0; margin:13px 0; flex-wrap:wrap; }
+  .flow-step { background:white; border:1.5px solid var(--rule); border-radius:8px; padding:11px 13px; text-align:center; min-width:88px; flex:1; margin:3px; }
+  .flow-step.active { border-color:var(--pv); border-width:2px; background:rgba(168,193,224,.18); }
+  .flow-step.green { border-color:var(--green); background:rgba(79,124,77,.1); }
+  .flow-step.red { border-color:var(--red); background:rgba(168,66,61,.1); }
+  .flow-step.orange { border-color:var(--orange); background:rgba(196,125,43,.1); }
+  .flow-step.teal { border-color:var(--teal); background:rgba(58,122,118,.1); }
+  .flow-step-num { font-family:'Fraunces',serif; font-size:9px; font-weight:800; color:var(--pl); letter-spacing:1.5px; margin-bottom:4px; }
+  .flow-step.green .flow-step-num { color:var(--green); }
+  .flow-step.red .flow-step-num { color:var(--red); }
+  .flow-step.orange .flow-step-num { color:var(--orange); }
+  .flow-step-name { font-family:'Fraunces',serif; font-size:11.5px; font-weight:700; color:var(--ink); margin-bottom:4px; line-height:1.2; }
+  .flow-step-desc { font-size:10.5px; color:var(--ink-light); line-height:1.4; }
+  .flow-arrow { font-size:18px; color:var(--pv); padding:0 4px; display:flex; align-items:center; flex-shrink:0; }
+
+  /* MINI CARD */
+  .mc2 { background:white; border:1.5px solid var(--rule); border-radius:8px; padding:13px 15px; }
+  .mc2-h { font-family:'Fraunces',serif; font-size:10.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--pc); margin-bottom:7px; }
+  .mc2-h.green { color:var(--green); }
+  .mc2-h.orange { color:var(--orange); }
+  .mc2-h.red { color:var(--red); }
+  .mc2-h.teal { color:var(--teal); }
+  .mc2-h.purple { color:var(--purple); }
+  .mc2-h.rose { color:var(--rose); }
+  .mc2-h.gold { color:var(--gold); }
+
+  /* HOSP / SCREEN BOX */
+  .hosp-box { background:rgba(168,66,61,.08); border:2px solid var(--red); border-radius:8px; padding:14px 18px; margin:13px 0; }
+  .hosp-title { font-family:'Fraunces',serif; font-size:11.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:8px; }
+  .hosp-box .bl li::before { color:var(--red); }
+
+  .screen-box { background:rgba(79,124,77,.1); border:2px solid var(--green); border-radius:8px; padding:14px 18px; margin:13px 0; }
+  .screen-title { font-family:'Fraunces',serif; font-size:11.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--green); margin-bottom:8px; }
+
+  .ttx-box { background:rgba(58,122,118,.1); border:2px solid var(--teal); border-radius:8px; padding:14px 18px; margin:13px 0; }
+  .ttx-title { font-family:'Fraunces',serif; font-size:11.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:8px; }
+
+  .page-num { font-size:10.5px; color:#988866; text-align:right; margin-top:48px; letter-spacing:1.5px; font-style:italic; }
+
+  .badge { display:inline-block; font-family:'Fraunces',serif; font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; padding:2px 8px; border-radius:3px; vertical-align:middle; margin-left:5px; }
+  .badge-uc { background:#dde4ee; color:var(--pc); border:1px solid #b8c9e1; }
+  .badge-bcn { background:#f0e8d8; color:#7a5c20; border:1px solid #d4be8a; }
+  .badge-int { background:#fae8d4; color:#7a4a10; border:1px solid #e8c896; }
+
+  .estrella { color: var(--gold); font-size:14px; }
+
+  /* TOC */
+  .toc { background:rgba(28,52,84,.06); border:1.5px solid var(--pv); border-radius:8px; padding:18px 24px; margin:14px 0 32px; }
+  .toc-title { font-family:'Fraunces',serif; font-size:13px; font-weight:800; letter-spacing:2.5px; text-transform:uppercase; color:var(--pc); margin-bottom:10px; }
+  .toc-grid { display:grid; grid-template-columns:1fr 1fr; gap:5px 24px; font-size:12px; color:var(--ink-light); }
+  .toc-grid div { padding-left:22px; position:relative; line-height:1.5; }
+  .toc-grid div::before { content:attr(data-n); position:absolute; left:0; font-family:'Fraunces',serif; font-weight:800; color:var(--pc); font-size:10px; top:2px; letter-spacing:.5px; }
+</style>
+</head>
+<body>
+
+<!-- ══════════ COVER ══════════ -->
+<div class="cover">
+  <div class="cover-label">Internado G&O · Resumen Prueba · Mayo 2026</div>
+  <div class="cover-title">Obs<span>tetricia</span></div>
+  <div class="cover-sub">Tamizaje · Diagnóstico · Clasificación · Tratamiento · Controles · Hospitalización</div>
+  <div class="cover-meta">Fuentes: Manual de Obstetricia y Ginecología UC (2026) · Protocolos Medicina Fetal Barcelona</div>
+  <div class="cover-chips">
+    <span class="chip">📋 Control Prenatal</span>
+    <span class="chip gold">🧬 Cribado 1T</span>
+    <span class="chip red">🩸 SHE / PE</span>
+    <span class="chip">💉 Diabetes</span>
+    <span class="chip">🩹 Anemia · ITU · Hipotiroidismo</span>
+    <span class="chip">🤢 Hiperemesis · Colestasia</span>
+    <span class="chip">⏱️ Parto Prematuro</span>
+    <span class="chip">💧 RPM</span>
+    <span class="chip red">🩸 Metrorragia 2ª Mitad</span>
+    <span class="chip gold">📏 RCIU · Doppler · LA</span>
+    <span class="chip">🦠 TORCH · SGB</span>
+    <span class="chip">👯 Múltiple</span>
+    <span class="chip rose">🅰️ Isoinmunización</span>
+    <span class="chip">📅 Postérmino · Macrosomía</span>
+    <span class="chip">👶 Trabajo de Parto · Inducción</span>
+    <span class="chip red">🚨 HPP</span>
+  </div>
+</div>
+
+<div class="notebook"><div class="page">
+
+<!-- TABLA DE CONTENIDOS -->
+<div class="toc">
+  <div class="toc-title">📑 Contenidos</div>
+  <div class="toc-grid">
+    <div data-n="01">Control Prenatal y Suplementación</div>
+    <div data-n="10">RCIU / PEG — Defectos del Crecimiento</div>
+    <div data-n="02">Cribado 1T (cromosómico + PE)</div>
+    <div data-n="11">Doppler Fetal y Líquido Amniótico</div>
+    <div data-n="03">Patología Materna (anemia · ITU · TSH)</div>
+    <div data-n="12">Infecciones Perinatales (TORCH + SGB)</div>
+    <div data-n="04">SHE / Preeclampsia</div>
+    <div data-n="13">Embarazo Múltiple</div>
+    <div data-n="05">Diabetes y Embarazo</div>
+    <div data-n="14">Isoinmunización Rh / EHP</div>
+    <div data-n="06">Hiperemesis y Colestasia</div>
+    <div data-n="15">Postérmino y Macrosomía</div>
+    <div data-n="07">Parto Prematuro</div>
+    <div data-n="16">Trabajo de Parto · Monitorización · Inducción</div>
+    <div data-n="08">RPM</div>
+    <div data-n="17">Hemorragia Post-Parto (HPP)</div>
+    <div data-n="09">Metrorragia 2ª Mitad</div>
+    <div data-n=" "> </div>
+  </div>
+</div>
+
+<!-- ══════════ 01. CONTROL PRENATAL ══════════ -->
+<div class="sh"><span class="sn sn-p">01</span><h2 class="st st-p">Control Prenatal — Bajo y Medio Riesgo</h2></div>
+
+<div class="q">
+  <div class="q-t">"Conjunto de acciones sistemáticas y periódicas para prevenir, diagnosticar y tratar factores que pueden condicionar morbimortalidad materna y perinatal."</div>
+  <div class="q-a">Manual UC 2026 · Protocolo CPN Barcelona</div>
+</div>
+
+<div class="cl cl-p" style="margin-bottom:8px;">Frecuencia y Cronograma</div>
+<div class="two">
+  <div class="cb cb-p">
+    <div class="cl cl-p">Calendario Recomendado</div>
+    <ul class="bl tight">
+      <li><strong>1ª visita:</strong> antes de las 10 semanas <span class="hlp">ideal &lt;8 sem</span></li>
+      <li>Mensual hasta 28 semanas</li>
+      <li>Cada 2–3 semanas entre 28–36 sem</li>
+      <li>Semanal desde 36 sem hasta el parto</li>
+      <li>Mínimo OMS: <strong>8 controles</strong></li>
+    </ul>
+  </div>
+  <div class="cb cb-p">
+    <div class="cl cl-p">Anamnesis Inicial</div>
+    <ul class="bl tight">
+      <li>FUR confiable + EG por ecografía precoz</li>
+      <li>Antecedentes obstétricos (paridad, abortos, óbitos, PP, PE, DM)</li>
+      <li>Antecedentes médicos, quirúrgicos, familiares (DTN, malformaciones)</li>
+      <li>Hábitos: tabaco, OH, drogas, fármacos teratogénicos</li>
+      <li>EF: peso, talla, IMC pregestacional, PA, examen GO</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cl cl-p" style="margin:14px 0 8px;">Exámenes por Trimestre</div>
+<table class="pt full">
+  <thead><tr><th>Trimestre</th><th>EG</th><th>Exámenes y Acciones Clave</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>1° Trimestre</td>
+      <td>6–14 sem</td>
+      <td>Hemograma · grupo y Rh · Coombs Indirecto si Rh(–) · VDRL/RPR · VIH (ELISA) · serología rubéola + toxoplasma · UC · glicemia ayunas (×2) · TSH · PAP si corresponde · Chagas en zonas endémicas. <strong>Eco 11–14 sem</strong> (vitalidad, EG, TN, hueso nasal, IP arteria uterina, cribado bioquímico β-HCG + PAPP-A).</td>
+    </tr>
+    <tr>
+      <td>2° Trimestre</td>
+      <td>20–28 sem</td>
+      <td><strong>Eco morfológica 20–24 sem</strong> (la más importante). PTGO 75 g a 24–28 sem. VDRL 2°T. Doppler arteria uterina si screening 1T (+). Hemograma. UC repetido. Vacuna dTpa &gt;28 sem. Inicio de hierro.</td>
+    </tr>
+    <tr>
+      <td>3° Trimestre</td>
+      <td>28–40 sem</td>
+      <td><strong>Cultivo SGB vagino-rectal 35–37 sem.</strong> Hemograma + VDRL 3°T + UC. Eco biometría 30–34 sem (+ Doppler si FR). Eco presentación 36 sem. Ig anti-D 28 sem si Rh(–). RBNE/PBF si ARO. Vigilancia movimientos fetales.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="screen-box">
+  <div class="screen-title">💊 Suplementación Estándar</div>
+  <div class="two">
+    <ul class="bl green tight">
+      <li><strong>Ácido Fólico:</strong> 0.4–1 mg/día desde preconcepción hasta sem 12. <span class="hlg">5 mg/día</span> si DTN previo, DM, epilepsia con valproico/CBZ, malabsorción</li>
+      <li><strong>Hierro elemental:</strong> 30–60 mg/día desde sem 16 (todas las gestantes en Chile)</li>
+    </ul>
+    <ul class="bl green tight">
+      <li><strong>Calcio:</strong> 1–1.5 g/día si ingesta dietaria pobre o riesgo de PE (↓ riesgo PE ~55%)</li>
+      <li><strong>Yodo:</strong> 150–200 mcg/día durante todo el embarazo y lactancia</li>
+      <li><strong>Vit D:</strong> 600–800 UI/día si déficit</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cl cl-p" style="margin:14px 0 8px;">Vacunación en el Embarazo</div>
+<table class="pt purple">
+  <thead><tr><th>Vacuna</th><th>Cuándo</th><th>Notas</th></tr></thead>
+  <tbody>
+    <tr><td>dTpa</td><td>Cada embarazo, &gt;28 sem (idealmente 28–36)</td><td>Protege al RN de tos convulsiva</td></tr>
+    <tr><td>Influenza</td><td>Cualquier trimestre durante temporada</td><td>Inactivada, segura siempre</td></tr>
+    <tr><td>COVID-19</td><td>Según indicación vigente</td><td>mRNA: seguras en embarazo</td></tr>
+    <tr><td>Anti-VRS</td><td>32–36 sem (donde disponible)</td><td>Protección pasiva del RN</td></tr>
+    <tr style="background:rgba(168,66,61,.06);"><td><strong>CONTRAINDICADAS</strong></td><td>—</td><td>Vacunas vivas atenuadas: <strong>SR, SRP, varicela, fiebre amarilla, BCG</strong></td></tr>
+  </tbody>
+</table>
+
+<div class="cb cb-p" style="margin-top:14px;">
+  <div class="cl cl-p">Criterios ARO — Derivar a Nivel Secundario</div>
+  <div class="two" style="gap:14px;">
+    <ul class="bl tight">
+      <li>SHE, DM pregestacional, cardiopatía</li>
+      <li>Enfermedad renal, hemoglobinopatía, LES</li>
+      <li>Cirugía uterina previa (≥2 cesáreas, miomectomía con apertura)</li>
+      <li>PP previo &lt;34 sem, RCIU previo, PE severa previa</li>
+    </ul>
+    <ul class="bl tight">
+      <li>Embarazo múltiple, placenta previa, EHP</li>
+      <li>Edad materna extrema (&lt;15 o ≥40 años)</li>
+      <li>IMC ≥35 o &lt;18.5</li>
+      <li>Malformación fetal, óbito previo inexplicado</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 02. CRIBADO 1T ══════════ -->
+<div class="sh"><span class="sn sn-gd">02</span><h2 class="st st-gd">Cribado 1° Trimestre — Cromosómico + Preeclampsia</h2></div>
+
+<div class="q gold">
+  <div class="q-t">"La eco 11–14 sem es el momento clave: cribado combinado de aneuploidías + cribado de PE precoz + cálculo de riesgo de PP."</div>
+  <div class="q-a">Protocolo Cribado Prenatal Barcelona · Manual UC 2026</div>
+</div>
+
+<div class="cl cl-gd" style="margin-bottom:8px;">Cribado Combinado de Aneuploidías (11+0 a 13+6 sem)</div>
+<table class="pt gold">
+  <thead><tr><th>Componente</th><th>Detalle</th></tr></thead>
+  <tbody>
+    <tr><td>Edad materna</td><td>Riesgo basal</td></tr>
+    <tr><td>Translucencia Nucal (TN)</td><td>&gt;p99 (≈3.5 mm) o ≥p95 = aumentada</td></tr>
+    <tr><td>Hueso nasal</td><td>Ausente / hipoplásico → marcador T21</td></tr>
+    <tr><td>Ductus venoso · Tricúspide</td><td>Onda a reversa / regurgitación → riesgo cromosómico y cardiopatía</td></tr>
+    <tr><td>β-HCG libre</td><td>↑ en T21 (~2 MoM); ↓ en T18/T13</td></tr>
+    <tr><td>PAPP-A</td><td>↓ en T21, T18, T13 — también marcador de mala placentación (PE/RCIU)</td></tr>
+    <tr><td>Resultado</td><td><strong>Alto riesgo:</strong> ≥1/250 → ofrecer prueba diagnóstica (BVC 11–14 sem o AMCT &gt;15 sem) o NIPT</td></tr>
+  </tbody>
+</table>
+
+<div class="ab">
+  <div class="ai">⭐</div>
+  <div class="at"><strong>NIPT (test prenatal no invasivo):</strong> ADN fetal libre en sangre materna. Sensibilidad &gt;99% para T21. Indicado como cribado 2ª línea tras combinado de alto riesgo o como cribado primario de elección. <strong>No reemplaza diagnóstico invasivo</strong> (BVC/AMCT) ante alteración estructural o NIPT (+).</div>
+</div>
+
+<div class="cl cl-gd" style="margin:14px 0 8px;">Cribado Combinado de Preeclampsia Precoz (Modelo FMF)</div>
+<div class="cb cb-gd">
+  <div class="cl cl-gd">Componentes (11–14 sem)</div>
+  <ul class="bl gold tight">
+    <li><strong>Factores maternos:</strong> edad, etnia, IMC, paridad, antecedente PE, HTAcr, DM, LES/SAF, FIV</li>
+    <li><strong>Presión arterial media (PAM)</strong> · <strong>IP medio arterias uterinas</strong> (Doppler)</li>
+    <li><strong>PlGF</strong> (factor crecimiento placentario) · PAPP-A (alternativo)</li>
+    <li>Algoritmo FMF Barcelona: detecta ~75% de PE precoz (&lt;34 sem) con 10% FP</li>
+  </ul>
+</div>
+
+<div class="screen-box" style="margin-top:14px;">
+  <div class="screen-title">💊 Aspirina como Prevención (ASPRE)</div>
+  <ul class="bl green tight">
+    <li><strong>Indicación:</strong> riesgo PE ≥1/100 en cribado 1T <em>o</em> ≥1 factor de alto riesgo (PE previa, HTAcr, DM, ERC, LES/SAF, embarazo múltiple) o ≥2 moderados</li>
+    <li><strong>Dosis:</strong> AAS 100–150 mg/noche</li>
+    <li><strong>Inicio:</strong> antes de sem 16 (idealmente 12–16) → ↓ PE precoz hasta 65% si inicio &lt;16 sem</li>
+    <li><strong>Mantener hasta sem 36</strong> (Barcelona) o hasta el parto</li>
+    <li>Calcio adicional 1–1.5 g/día si baja ingesta</li>
+  </ul>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 03. PATOLOGÍA MATERNA FRECUENTE ══════════ -->
+<div class="sh"><span class="sn sn-c">03</span><h2 class="st st-c">Patología Materna Frecuente — Anemia · ITU · Hipotiroidismo</h2></div>
+
+<div class="cl cl-c" style="margin-bottom:8px;">Anemia en el Embarazo</div>
+<div class="two">
+  <div class="cb cb-c">
+    <div class="cl cl-c">Definición y Clasificación</div>
+    <ul class="bl tight">
+      <li><strong>Anemia:</strong> Hb &lt;11 g/dL (1°T y 3°T) · Hb &lt;10.5 g/dL (2°T) · Hb &lt;10 g/dL postparto</li>
+      <li>Severa: Hb &lt;7 g/dL → considerar transfusión</li>
+      <li>Causas: <strong>ferropénica (75%)</strong>, megaloblástica (folato, B12), enf. crónica, hemoglobinopatías</li>
+    </ul>
+  </div>
+  <div class="cb cb-c">
+    <div class="cl cl-c">Diagnóstico y Tratamiento</div>
+    <ul class="bl tight">
+      <li>Hemograma + cinética del Fe (ferritina &lt;30 ng/mL = ferropenia)</li>
+      <li><strong>Tto:</strong> Sulfato ferroso 200 mg c/8 h (60–120 mg Fe elemental/día) en ayunas con vit C</li>
+      <li>Sin respuesta en 3–4 sem o intolerancia → <strong>Fe carboximaltosa EV</strong></li>
+      <li>Megaloblástica: B12 + ácido fólico 5 mg/día</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cl cl-c" style="margin:14px 0 8px;">Infecciones Urinarias en Embarazo</div>
+<table class="pt purple">
+  <thead><tr><th>Cuadro</th><th>Diagnóstico</th><th>Tratamiento (Chile)</th><th>Notas</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Bacteriuria asintomática</td>
+      <td>UC ≥10⁵ UFC/mL · 1 muestra</td>
+      <td><strong>Cefradina/Cefadroxilo</strong> 500 mg c/8 h × 7 días o Nitrofurantoína 100 mg c/6 h × 7 días</td>
+      <td>Tratar siempre · UC control 1–2 sem post-tto</td>
+    </tr>
+    <tr>
+      <td>Cistitis</td>
+      <td>Disuria, polaquiuria, urgencia + UC (+)</td>
+      <td>Mismo esquema 7 días</td>
+      <td>UC control</td>
+    </tr>
+    <tr>
+      <td>Pielonefritis aguda</td>
+      <td>Fiebre + PRPC + alteración EGO + UC (+)</td>
+      <td><strong>Hospitalizar.</strong> Cefazolina 1 g c/8 h EV o Ceftriaxona 1–2 g/día EV → ajustar a oral según ATBgrama × total 14 días</td>
+      <td>5° causa de PP. Riesgo sepsis</td>
+    </tr>
+    <tr style="background:rgba(168,66,61,.06);"><td colspan="4"><strong>⚠️ EVITAR:</strong> Quinolonas (afectan cartílago) · Sulfas en 3°T (kernicterus) · Tetraciclinas (dientes/huesos) · Aminoglucósidos prolongados</td></tr>
+  </tbody>
+</table>
+
+<div class="cl cl-c" style="margin:14px 0 8px;">Patología Tiroidea</div>
+<div class="two">
+  <div class="cb cb-c">
+    <div class="cl cl-c">Hipotiroidismo y Embarazo</div>
+    <ul class="bl tight">
+      <li><strong>TSH meta:</strong> 1°T &lt;2.5 mIU/L · 2°-3°T &lt;3.0 mIU/L</li>
+      <li>HipoT clínico: TSH ↑ + T4L ↓ → tratar</li>
+      <li>HipoT subclínico: TSH ↑ + T4L normal → tratar si TPO (+) o TSH &gt;4</li>
+      <li><strong>Levotiroxina:</strong> ajustar a peso (1.6–2 µg/kg). Embarazadas conocidas: ↑ dosis 25–30% al confirmar embarazo</li>
+      <li>Control TSH cada 4–6 sem el 1°-2°T, luego c/2°T</li>
+    </ul>
+  </div>
+  <div class="cb cb-c">
+    <div class="cl cl-c">Hipertiroidismo</div>
+    <ul class="bl tight">
+      <li>Causa más frecuente: enfermedad de Graves</li>
+      <li>Distinguir de hipertiroidismo gestacional transitorio (β-HCG → ↑ T4L; primer trimestre, autolimitado)</li>
+      <li><strong>1°T: PTU</strong> (menor teratogenia) → cambiar a Metimazol 2°-3°T (riesgo hepatotoxicidad PTU)</li>
+      <li>Crisis tirotóxica → UCI: PTU + propranolol + corticoides + yodo</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 04. SHE / PE ══════════ -->
+<div class="sh"><span class="sn sn-r">04</span><h2 class="st st-r">SHE — Síndrome Hipertensivo del Embarazo</h2></div>
+
+<div class="q red">
+  <div class="q-t">"2ª causa de mortalidad materna en Chile (24%). Afecta el 5–15% de los embarazos. El único tratamiento curativo es la interrupción del embarazo."</div>
+  <div class="q-a">Manual UC 2026 · Protocolo HTA y Gestación Barcelona</div>
+</div>
+
+<div class="cl cl-r" style="margin-bottom:8px;">Clasificación SHE</div>
+<table class="pt red">
+  <thead><tr><th>Tipo</th><th>Definición</th><th>EG / Criterios</th><th>Incidencia</th></tr></thead>
+  <tbody>
+    <tr><td>HTA Crónica</td><td>HTA conocida o aparece &lt;20 sem o persiste &gt;12 sem postparto</td><td>&lt;20 sem</td><td>3–5%</td></tr>
+    <tr><td>HTA Gestacional</td><td>HTA &gt;20 sem sin proteinuria ni daño orgánico. <strong>25% progresa a PE</strong></td><td>&gt;20 sem</td><td>1–2%</td></tr>
+    <tr><td>Preeclampsia</td><td>HTA de novo &gt;20 sem + proteinuria <em>o</em> daño orgánico (DOB)</td><td>&gt;20 sem</td><td>3–10% nulíparas</td></tr>
+    <tr><td>HTACr + PE sobreagregada</td><td>HTACr que desarrolla proteinuria / DOB</td><td>Suele ser precoz · riesgo 30–50%</td><td>1–2%</td></tr>
+  </tbody>
+</table>
+
+<div class="two" style="margin-top:14px;">
+  <div class="cb cb-r">
+    <div class="cl cl-r">Diagnóstico — PA</div>
+    <div class="cc">
+      <strong>PA ≥ 140/90</strong> en 2 tomas separadas 4–6 h (en reposo).<br>
+      Práctica: semi-hospitalización con 3 tomas en 6 h.<br>
+      <span class="hlr">Crisis HTA: PA ≥160/110</span> → confirmar a los 15 min, manejo inmediato.
+    </div>
+  </div>
+  <div class="cb cb-r">
+    <div class="cl cl-r">Diagnóstico — Proteinuria</div>
+    <div class="cc">
+      <strong>IPC ≥0.3</strong> (300 mg/g) en muestra aislada → diagnóstico.<br>
+      IPC 0.15–0.3 → confirmar con proteinuria 24 h ≥300 mg.<br>
+      Dipstick ≥++ correlaciona con IPC &gt;0.3.
+    </div>
+  </div>
+</div>
+
+<div class="cl cl-r" style="margin:14px 0 6px;">Criterios de Severidad — basta 1 para catalogar PE Severa</div>
+<div class="two">
+  <ul class="bl red tight">
+    <li><strong>PA ≥160/110</strong> en 2 tomas con minutos de intervalo</li>
+    <li><strong>Trombocitopenia</strong> &lt;100.000/µL</li>
+    <li><strong>Daño hepático:</strong> transaminasas ×2 + dolor HD/epigastralgia persistente</li>
+    <li><strong>IR progresiva:</strong> creatinina &gt;1.1 mg/dL o ×2 del basal</li>
+  </ul>
+  <ul class="bl red tight">
+    <li><strong>Edema pulmonar</strong></li>
+    <li><strong>Neurológicos:</strong> cefalea refractaria, fotopsias, escotomas, amaurosis, clonus</li>
+    <li><strong>Eclampsia</strong> (convulsiones tónico-clónicas)</li>
+    <li>RCIU placentario severo / DPPNI / óbito → asociado pero no criterio formal</li>
+  </ul>
+</div>
+
+<div class="ab red">
+  <div class="ai">⭐</div>
+  <div class="at"><strong>HELLP:</strong> Hemólisis (LDH &gt;600 · esquistocitos · bili indirecta ↑) + Disfunción hepática (transaminasas ≥2× LSN) + Trombocitopenia (&lt;100.000). Complicación severa de PE — interrupción inmediata.</div>
+</div>
+
+<div class="screen-box" style="margin-top:12px;">
+  <div class="screen-title">🔍 Tamizaje y Prevención</div>
+  <ul class="bl green tight">
+    <li><strong>Cribado 11–14 sem:</strong> factores maternos + PAM + IP arterias uterinas + PlGF (modelo FMF)</li>
+    <li><strong>Aspirina 100–150 mg/noche</strong> desde sem 12–16 hasta sem 36 si alto riesgo → ↓ 65% PE precoz</li>
+    <li>Calcio 1–1.5 g/día si baja ingesta dietaria</li>
+    <li>Re-evaluar en eco 20–24 sem (IP arterias uterinas) si riesgo intermedio</li>
+  </ul>
+</div>
+
+<div class="cl cl-r" style="margin:14px 0 6px;">Tratamiento Hospitalizado</div>
+<div class="two">
+  <div class="mc2">
+    <div class="mc2-h">PE sin Criterios de Severidad</div>
+    <ul class="bl tight">
+      <li>Hospitalización hasta interrupción</li>
+      <li><strong>Interrupción a las 37 semanas</strong></li>
+      <li>Reposo relativo en DLI · régimen normosódico</li>
+      <li>CSV + ROT + DU + LCF + MF c/4–6 h</li>
+      <li>Peso y diuresis diarios</li>
+      <li>Lab severidad semanal · IPC semanal</li>
+      <li>Vigilancia fetal: RBNE diario · PBF semanal · curva c/10 días · Doppler AUmb c/2 sem</li>
+    </ul>
+  </div>
+  <div class="mc2">
+    <div class="mc2-h red">PE con Criterios de Severidad</div>
+    <ul class="bl red tight">
+      <li><strong>Interrupción a las 34 sem</strong> tras maduración pulmonar (si estable)</li>
+      <li>Reposo absoluto DLI</li>
+      <li>CSV + ROT + DU + LCF c/3–4 h</li>
+      <li>Lab bisemanal + IPC y proteinuria 24 h semanal</li>
+      <li>Vigilancia fetal: RBNE + PBF c/48 h · Doppler semanal</li>
+      <li><strong>Sulfato Mg</strong> ante signos neurológicos o eclampsia</li>
+      <li><strong>Antihipertensivos</strong> si PA ≥160/110: Labetalol · Nifedipino · Hidralazina</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ttx-box" style="border-color:var(--purple); background:rgba(124,92,156,.08);">
+  <div class="ttx-title" style="color:var(--purple);">💊 Antihipertensivos en Crisis HTA (PA ≥160/110)</div>
+  <table class="pt purple" style="margin:6px 0 0;">
+    <thead><tr><th>Fármaco</th><th>Dosis</th><th>Notas</th></tr></thead>
+    <tbody>
+      <tr><td>Labetalol EV</td><td>20 mg bolo → ↑ 40, 80 mg c/10 min (máx 220 mg) o BIC 1–2 mg/min</td><td>1ª línea Barcelona. CI: asma, ICC, bradicardia</td></tr>
+      <tr><td>Nifedipino VO</td><td>10 mg c/20 min (máx 50 mg) o liberación prolongada 30 mg c/12 h</td><td>1ª línea Chile/UC. Cuidado con sulfato Mg (sinergia hipotensión)</td></tr>
+      <tr><td>Hidralazina EV</td><td>5 mg bolo c/20 min (máx 30 mg)</td><td>Alternativa. Riesgo de hipotensión brusca</td></tr>
+      <tr><td>α-Metildopa VO</td><td>250–500 mg c/6–12 h</td><td>Manejo crónico ambulatorio</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="ab purple">
+  <div class="ai">💉</div>
+  <div class="at"><strong>Sulfato de Magnesio (profilaxis eclampsia):</strong> dosis carga 4–6 g EV en 20 min → mantención 1–2 g/h × 24 h post-parto. Vigilar ROT (presentes), FR &gt;14, diuresis &gt;30 mL/h. Antídoto: <strong>Gluconato de Calcio 1 g EV</strong> si toxicidad.</div>
+</div>
+
+<div class="hosp-box">
+  <div class="hosp-title">🏥 Cuándo Hospitalizar — SHE</div>
+  <ul class="bl">
+    <li><strong>TODA PE</strong> se hospitaliza hasta la interrupción</li>
+    <li>Semi-hospitalización (+): última PA ≥140/90</li>
+    <li>APS: PA &gt;140/90 en &lt;20 sem → derivar PARO; ≥20 sem → urgencia</li>
+    <li><strong>Crisis HTA</strong> (≥160/110): hospitalización inmediata + antihipertensivos</li>
+    <li><strong>Eclampsia · HELLP · edema pulmonar</strong> → UCI</li>
+  </ul>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 05. DIABETES ══════════ -->
+<div class="sh"><span class="sn sn-g">05</span><h2 class="st st-g">Diabetes y Embarazo</h2></div>
+
+<div class="q green">
+  <div class="q-t">"10% pregestacional · 90% gestacional. Resistencia insulínica máxima a las 26–30 sem. Control metabólico estricto reduce malformaciones y morbimortalidad."</div>
+  <div class="q-a">Manual UC 2026 · Protocolo Diabetes Gestacional Barcelona</div>
+</div>
+
+<div class="cl cl-g" style="margin-bottom:8px;">Clasificación de White</div>
+<table class="pt green">
+  <thead><tr><th>Clase</th><th>Tipo</th><th>Inicio / Duración</th><th>Vasculopatía</th><th>Insulina</th></tr></thead>
+  <tbody>
+    <tr><td>A1</td><td>Gestacional</td><td>Embarazo</td><td>—</td><td>No</td></tr>
+    <tr><td>A2</td><td>Gestacional</td><td>Embarazo</td><td>—</td><td>Sí</td></tr>
+    <tr><td>B</td><td>Pregestacional</td><td>&gt;20 años o &lt;10 años evol.</td><td>—</td><td>Sí</td></tr>
+    <tr><td>C / D / F / R / H</td><td>Pregestacional</td><td>Variable</td><td>Sí (retina/riñón/coronaria)</td><td>Sí</td></tr>
+  </tbody>
+</table>
+
+<div class="cl cl-g" style="margin:14px 0 6px;">Tamizaje (Estrategia One-Step)</div>
+<div class="screen-box">
+  <div class="screen-title">🔍 Cómo Tamizar</div>
+  <div class="two">
+    <div>
+      <div class="cl cl-g" style="margin-bottom:4px;">1° Trimestre — GA a TODAS</div>
+      <ul class="bl green tight">
+        <li><strong>GA 100–125 mg/dL ×2</strong> → DM gestacional (diagnóstico precoz)</li>
+        <li><strong>GA ≥126 ×2</strong> o GA ≥200 + síntomas → DM pregestacional</li>
+        <li>HbA1c ≥6.5% → DM pregestacional</li>
+      </ul>
+    </div>
+    <div>
+      <div class="cl cl-g" style="margin-bottom:4px;">24–28 semanas — PTGO 75 g</div>
+      <ul class="bl green tight">
+        <li>Cortes (one-step / OMS): <strong>ayuno ≥92 · 1 h ≥180 · 2 h ≥153</strong></li>
+        <li>1 valor alterado = DG</li>
+        <li>Repetir PTGO ~32 sem si factores de riesgo</li>
+        <li>FR: familiar 1° grado, ≥30 a, IMC ≥27, macrosómico previo, óbito, PHA, PCOS</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="cl cl-g" style="margin:14px 0 6px;">Metas Glicémicas y Tratamiento</div>
+<div class="two">
+  <table class="pt green">
+    <thead><tr><th>Momento</th><th>Meta</th></tr></thead>
+    <tbody>
+      <tr><td>Ayuno</td><td>60–90 mg/dL</td></tr>
+      <tr><td>1 h postcarga</td><td>&lt;140 mg/dL</td></tr>
+      <tr><td>2 h postcarga</td><td>&lt;120 mg/dL</td></tr>
+      <tr><td>Pre-prandial</td><td>60–95 mg/dL</td></tr>
+      <tr><td>HbA1c</td><td>&lt;6%</td></tr>
+    </tbody>
+  </table>
+  <div class="cb cb-g">
+    <div class="cl cl-g">Escalón Terapéutico</div>
+    <ul class="bl green tight">
+      <li><strong>Dieta + actividad física</strong> (1ª línea, A1)</li>
+      <li>Sin metas en 1–2 sem → <strong>Insulina</strong> (NPH ± rápida; análogos: lispro, aspart, detemir)</li>
+      <li>Metformina: <strong>no es 1ª línea</strong> en embarazo en Chile (no aprobada formalmente). Algunos protocolos la aceptan</li>
+      <li>Ganancia ponderal moderada según IMC pregestacional</li>
+      <li>Vigilancia fetal estricta a partir de 32–34 sem</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ab">
+  <div class="ai">⚠️</div>
+  <div class="at"><strong>Malformación patognomónica de DM pregestacional:</strong> Síndrome de regresión caudal (agenesia sacrococcígea + EEII malformadas). Riesgo proporcional a HbA1c periconcepcional (HbA1c 10% → ~50% malformaciones).</div>
+</div>
+
+<div class="cl cl-g" style="margin:14px 0 6px;">Vía e Interrupción</div>
+<div class="cb cb-g">
+  <ul class="bl green tight">
+    <li><strong>DG A1 bien controlada:</strong> parto a las 38–40 sem (puede esperar inicio espontáneo)</li>
+    <li><strong>DG A2 / pregestacional bien controlada:</strong> 38–39 sem</li>
+    <li><strong>Mal control / vasculopatía / RCIU:</strong> 36–37 sem según severidad</li>
+    <li><strong>Macrosomía ≥4500 g</strong> (≥4250 si DM): cesárea electiva</li>
+    <li>Insulina intra-parto: BIC + glicemia c/1 h, meta 70–110 mg/dL</li>
+  </ul>
+</div>
+
+<div class="hosp-box">
+  <div class="hosp-title">🏥 Cuándo Hospitalizar / Interrumpir</div>
+  <ul class="bl">
+    <li><strong>Descompensación metabólica</strong> (CAD, hiperglicemia severa) → hospitalización urgente</li>
+    <li>Mal control con insulinoterapia ajustada</li>
+    <li>Macrosomía importante (PEF ≥p95 con DG)</li>
+    <li>PHA · complicaciones vasculares · RCIU · PE asociada</li>
+    <li>Control prenatal cada 2 sem hasta 28 sem, luego semanal</li>
+  </ul>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 06. HEPÁTICAS ══════════ -->
+<div class="sh"><span class="sn sn-t">06</span><h2 class="st st-t">Patología Hepática del Embarazo — Hiperemesis · Colestasia</h2></div>
+
+<div class="two">
+  <div>
+    <div class="cl cl-t" style="margin-bottom:8px;">Hiperemesis Gravídica (HEG)</div>
+    <div class="cb cb-t">
+      <div class="cl cl-t">Definición</div>
+      <div class="cc">Vómitos severos con <strong>pérdida ≥5% peso pregestacional</strong>, deshidratación y alteraciones metabólicas (cetonuria, alcalosis hipoclorémica). Pico: 9–10 sem. Incidencia 0.3–2%.</div>
+    </div>
+    <table class="pt teal" style="margin-top:10px;">
+      <thead><tr><th>Diagnóstico Diferencial</th><th>Pista</th></tr></thead>
+      <tbody>
+        <tr><td>NVE fisiológica</td><td>Sin pérdida peso, sin cetosis ni alteraciones electrolíticas</td></tr>
+        <tr><td>Hiperemesis</td><td>Cetonuria + pérdida peso ≥5% + hospitalización</td></tr>
+        <tr><td>Descartar</td><td>Mola (β-HCG muy alta), embarazo múltiple, hipertiroidismo, gastritis, ITU</td></tr>
+      </tbody>
+    </table>
+    <div class="cb cb-t" style="margin-top:10px;">
+      <div class="cl cl-t">Tratamiento Escalonado</div>
+      <ul class="bl tight">
+        <li>1ª línea ambulatoria: <strong>Vit B6 (piridoxina) 25 mg c/8 h + Doxilamina 12.5 mg c/8 h</strong></li>
+        <li>+ Metoclopramida 10 mg c/8 h · Ondansetrón 4–8 mg c/8 h (precaución 1°T) · Prometazina</li>
+        <li>Hidratación EV: SF + KCl + <strong>Tiamina (B1) 100 mg ANTES de glucosa</strong> → previene Wernicke</li>
+        <li>Refractaria: corticoides (metilprednisolona 16 mg c/8 h × 3 días, retiro lento)</li>
+        <li>Casos extremos: nutrición parenteral</li>
+      </ul>
+    </div>
+    <div class="ab red">
+      <div class="ai">⚠️</div>
+      <div class="at"><strong>Siempre Tiamina antes de glucosa EV</strong> → previene encefalopatía de Wernicke (reversible) que puede progresar a sd. Korsakoff (irreversible).</div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cl cl-t" style="margin-bottom:8px;">Colestasia Intrahepática del Embarazo (CIE)</div>
+    <div class="cb cb-t">
+      <div class="cl cl-t">Definición</div>
+      <div class="cc">Colestasis reversible inducida por el embarazo, con <strong>prurito generalizado palmo-plantar de predominio nocturno + ácidos biliares ≥10 µmol/L</strong>. 3°T habitualmente. Más frecuente en gemelar, VHC, ACO previa, antecedente personal/familiar.</div>
+    </div>
+    <table class="pt teal" style="margin-top:10px;">
+      <thead><tr><th>Parámetro</th><th>Umbral</th></tr></thead>
+      <tbody>
+        <tr><td>Ácidos biliares totales</td><td>≥10 µmol/L (DG) · <strong>≥40 µmol/L = severa</strong> (riesgo MFIU)</td></tr>
+        <tr><td>Transaminasas (GOT/GPT)</td><td>Elevadas hasta 2–10×</td></tr>
+        <tr><td>GGT, FA</td><td>Pueden elevarse (FA fisiológica embarazo)</td></tr>
+        <tr><td>Bilirrubina</td><td>Levemente elevada en 10–20%</td></tr>
+        <tr><td>TP/INR</td><td>Vigilar: malabsorción Vit K en colestasis</td></tr>
+      </tbody>
+    </table>
+    <div class="cb cb-t" style="margin-top:10px;">
+      <div class="cl cl-t">Tratamiento</div>
+      <ul class="bl tight">
+        <li><strong>Ácido Ursodesoxicólico (AUDC) 10–15 mg/kg/día</strong> en 2–3 dosis → 1ª línea, mejora prurito y ↓ ácidos biliares</li>
+        <li>Vitamina K 10 mg/día si TP alterado</li>
+        <li>Antihistamínicos: control sintomático (clorfenamina, hidroxizina)</li>
+        <li><strong>Interrupción a las 37 sem</strong> · severa (≥40 µmol/L): <strong>34–36 sem</strong></li>
+      </ul>
+    </div>
+    <div class="hosp-box" style="padding:12px 16px;">
+      <div class="hosp-title" style="font-size:10px;">🏥 Hospitalizar si</div>
+      <ul class="bl tight">
+        <li>Ácidos biliares ≥40 µmol/L (CIE severa)</li>
+        <li>Prurito refractario con mala calidad de vida</li>
+        <li>Alteración hepática severa o ictericia</li>
+        <li>Bienestar fetal alterado · PP / RPM</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 07. PARTO PREMATURO ══════════ -->
+<div class="sh"><span class="sn sn-o">07</span><h2 class="st st-o">Parto Prematuro — Síndrome y Manejo</h2></div>
+
+<div class="q orange">
+  <div class="q-t">"1ª causa directa de mortalidad perinatal (35%). 10% de los partos a nivel mundial. PP previo multiplica el riesgo ×4–10."</div>
+  <div class="q-a">Manual UC 2026 · Protocolo APP Barcelona</div>
+</div>
+
+<div class="cl cl-o" style="margin-bottom:8px;">Clasificación OMS</div>
+<table class="pt orange">
+  <thead><tr><th>Tipo</th><th>EG</th><th>Peso asociado</th></tr></thead>
+  <tbody>
+    <tr><td>Extremo</td><td>&lt;28 semanas</td><td>EBPN &lt;1.000 g</td></tr>
+    <tr><td>Severo</td><td>28–31+6 semanas</td><td>MBPN &lt;1.500 g</td></tr>
+    <tr><td>Moderado</td><td>32–33+6 semanas</td><td>BPN &lt;2.500 g</td></tr>
+    <tr><td>Tardío</td><td>34–36+6 semanas</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<div class="cl cl-o" style="margin:14px 0 6px;">Diagnóstico y Predicción</div>
+<div class="two">
+  <div class="cb cb-o">
+    <div class="cl cl-o">Cervicometría <span class="estrella">⭐</span></div>
+    <ul class="bl orange tight">
+      <li><strong>&gt;25 mm</strong> → bajo riesgo</li>
+      <li><strong>15–25 mm</strong> → riesgo intermedio (×6–15) · 10% PP</li>
+      <li><strong>&lt;15 mm</strong> → alto riesgo · 30% PP</li>
+      <li><strong>Funnel</strong> (OCI dilatado en V/Y/U) = mayor riesgo</li>
+      <li><strong>Sludge</strong> (barro intra-amniótico) = invasión microbiana</li>
+    </ul>
+  </div>
+  <div class="cb cb-o">
+    <div class="cl cl-o">Fibronectina Fetal (fFN) y Otros</div>
+    <ul class="bl orange tight">
+      <li>Muestra cervicovaginal entre 24–34 sem</li>
+      <li><strong>(–) = VPN 99%</strong> → tranquiliza</li>
+      <li>(+) = VPP moderado</li>
+      <li>No tomar si coito reciente (24 h), TV o cervicometría reciente</li>
+      <li>Alternativas Barcelona: PAMG-1 (PartoSure), phIGFBP-1</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cl cl-o" style="margin:14px 0 6px;">Prevención</div>
+<div class="screen-box">
+  <div class="screen-title">💊 Herramientas de Prevención</div>
+  <div class="two">
+    <ul class="bl green tight">
+      <li><strong>Progesterona vaginal 200 mg/noche</strong> hasta sem 36 si cuello &lt;25 mm en eco 20–24 sem (cribado universal recomendado por Barcelona) → <span class="hlg">↓ 40–50% PP &lt;34 sem</span></li>
+      <li>Tratar vaginosis bacteriana / ITU asintomática &lt;20 sem → ↓ 37% PP</li>
+      <li>Cesación tabáquica · espaciar embarazos &gt;18 meses</li>
+    </ul>
+    <ul class="bl green tight">
+      <li><strong>Cerclaje</strong> (McDonald / Shirodkar): por historia (≥2 pérdidas 2°-3°T tardías), por eco (cuello &lt;25 mm con antecedente PP), por EF (dilatación &gt;1–2 cm en 2°T)</li>
+      <li><strong>Pesario cervical</strong> (Arabin): alternativa al cerclaje en cuello corto</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cl cl-o" style="margin:14px 0 6px;">Manejo del Trabajo de Parto Prematuro</div>
+<div class="flow-row">
+  <div class="flow-step orange">
+    <div class="flow-step-num">01</div>
+    <div class="flow-step-name">Hospitalizar</div>
+    <div class="flow-step-desc">Confirmar DG, EG, descartar IIA · DPPNI · RPM · sufrimiento fetal</div>
+  </div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step active">
+    <div class="flow-step-num">02</div>
+    <div class="flow-step-name">Corticoides</div>
+    <div class="flow-step-desc">24+0 a 34+6 sem: <strong>Betametasona 12 mg IM c/24 h × 2</strong> o Dexa 6 mg c/12 h × 4</div>
+  </div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step orange">
+    <div class="flow-step-num">03</div>
+    <div class="flow-step-name">Tocolisis</div>
+    <div class="flow-step-desc"><strong>Atosibán</strong> (Barcelona 1ª línea) o <strong>Nifedipino</strong> (UC 1ª línea). Solo 48 h para corticoides</div>
+  </div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step active">
+    <div class="flow-step-num">04</div>
+    <div class="flow-step-name">Sulfato Mg</div>
+    <div class="flow-step-desc">&lt;32 sem: <strong>neuroprotección fetal</strong>. 4 g bolo + 1 g/h × 12–24 h</div>
+  </div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step orange">
+    <div class="flow-step-num">05</div>
+    <div class="flow-step-name">ATB</div>
+    <div class="flow-step-desc">Solo si sospecha IIA o SGB(+). No profilácticos en PP con membranas íntegras</div>
+  </div>
+</div>
+
+<div class="ttx-box">
+  <div class="ttx-title">💊 Tocolíticos — Esquemas</div>
+  <table class="pt teal" style="margin:6px 0 0;">
+    <thead><tr><th>Fármaco</th><th>Dosis</th><th>Notas / CI</th></tr></thead>
+    <tbody>
+      <tr><td>Nifedipino VO</td><td>20 mg → 10–20 mg c/15 min × 3 → mantención 20 mg c/4–6 h × 48 h</td><td>1ª línea Chile/UC. CI: hipotensión, falla cardíaca</td></tr>
+      <tr><td>Atosibán EV</td><td>Bolo 6.75 mg → BIC 18 mg/h × 3 h → 6 mg/h × 45 h</td><td>1ª línea Barcelona. Mejor perfil seguridad</td></tr>
+      <tr><td>Indometacina VO/rectal</td><td>50–100 mg carga → 25–50 mg c/6 h × 48 h</td><td><strong>Solo &lt;32 sem.</strong> Riesgo cierre ductus si &gt;32 sem</td></tr>
+      <tr><td>Sulfato Mg (no tocolítico)</td><td>4 g EV bolo + 1 g/h</td><td>Neuroprotección fetal &lt;32 sem</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="ab red">
+  <div class="ai">🚫</div>
+  <div class="at"><strong>NO usar tocolíticos</strong> si: corioamnionitis, DPPNI, anomalía letal, madurez comprobada (≥34 sem), trabajo de parto avanzado (&gt;4 cm con borramiento), hemorragia activa, sufrimiento fetal. Tocolisis solo gana las 48 h de corticoides.</div>
+</div>
+
+<div class="hosp-box">
+  <div class="hosp-title">🏥 Cuándo Hospitalizar — PP</div>
+  <ul class="bl">
+    <li>Contracciones regulares con cambios cervicales objetivados</li>
+    <li>Cuello &lt;15 mm sintomático o &lt;25 mm con DU</li>
+    <li>RPM asociada · sospecha de IIA · sangrado</li>
+    <li>Parto prematuro inminente (&lt;34 sem)</li>
+  </ul>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 08. RPM ══════════ -->
+<div class="sh"><span class="sn sn-t">08</span><h2 class="st st-t">RPM — Rotura Prematura de Membranas</h2></div>
+
+<div class="q teal">
+  <div class="q-t">"90% se diagnostica con anamnesis + EF. A las 6 h ascienden bacterias, 12 h infección clínica, 24 h infección fetal. Diagnóstico precoz es clave."</div>
+  <div class="q-a">Manual UC 2026 · Protocolo RPM Barcelona</div>
+</div>
+
+<div class="two">
+  <div class="cb cb-t">
+    <div class="cl cl-t">Definición</div>
+    <div class="cc">Rotura de membranas (corion + amnios) <strong>antes del inicio del trabajo de parto</strong>, independiente de la EG.<br><strong>RPPM (pretérmino)</strong> = &lt;37 sem. Causa el 33% de los PP y el 10% de la mortalidad perinatal.</div>
+  </div>
+  <div class="cb cb-t">
+    <div class="cl cl-t">Período de Latencia</div>
+    <div class="cc">
+      <strong>Término:</strong> 90% inicia TdP en 24–48 h → manejo activo (inducción).<br>
+      <strong>Pretérmino:</strong> 50% inicia TdP en 48 h · resto puede prolongarse → manejo expectante si &lt;34 sem (ganar madurez).
+    </div>
+  </div>
+</div>
+
+<div class="cl cl-t" style="margin:14px 0 6px;">Diagnóstico</div>
+<table class="pt teal">
+  <thead><tr><th>Prueba</th><th>S</th><th>Técnica / Detalle</th><th>Falsos (+)</th></tr></thead>
+  <tbody>
+    <tr><td>Test cristalización <span class="estrella">⭐</span></td><td>90–95%</td><td>Muestra fondo de saco → portaobjetos → secar → "hojas de helecho"</td><td>Semen, mucus, sudor</td></tr>
+    <tr><td>pH (nitrazina)</td><td>~90%</td><td>Viraje amarillo→azul si pH &gt;6 (LA 7.1–7.3)</td><td>Sangre, semen, gel US, vaginosis</td></tr>
+    <tr><td>AmniSure / PAMG-1</td><td>Alta</td><td>α-microglobulina placentaria</td><td>Pocos · útil en duda</td></tr>
+    <tr><td>IGFBP-1 (PROM Test)</td><td>Alta</td><td>Decidua/líquido amniótico</td><td>Pocos</td></tr>
+    <tr><td>Eco</td><td>Adyuvante</td><td>OHA (ILA bajo) apoya el DG cuando clínica dudosa</td><td>—</td></tr>
+    <tr><td>Índigo carmín (gold std)</td><td>100%</td><td>AMCT con colorante azul → sale por vagina. Solo duda extrema</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<div class="ab red">
+  <div class="ai">🚫</div>
+  <div class="at"><strong>EVITAR tacto vaginal digital</strong> en RPPM → aumenta infección ascendente y acorta latencia. Usar <strong>solo espéculo</strong>. TV únicamente si trabajo de parto activo o RPM de término.</div>
+</div>
+
+<div class="cl cl-t" style="margin:14px 0 6px;">Manejo según EG</div>
+<table class="pt teal full">
+  <thead><tr><th>EG</th><th>Manejo</th></tr></thead>
+  <tbody>
+    <tr><td>&lt;24 sem (pre-viable)</td><td>Consejería perinatal individualizada. Manejo expectante o interrupción según preferencia y pronóstico. Pronóstico fetal muy malo (hipoplasia pulmonar).</td></tr>
+    <tr><td>24–34 sem</td><td><strong>Manejo expectante hospitalizado.</strong> Corticoides · ATB profilácticos (<strong>Ampicilina 2 g EV c/6 h × 48 h → Amoxicilina VO + Eritromicina 250 mg c/6 h × 5–7 d</strong>) · Sulfato Mg si &lt;32 sem · vigilancia infección. AMCT si IIA dudosa.</td></tr>
+    <tr><td>34–37 sem</td><td>Tendencia a interrumpir (balance riesgos). Corticoides si &lt;34+6. Si SGB(+) o desconocido → profilaxis intraparto.</td></tr>
+    <tr><td>≥37 sem (RPO término)</td><td><strong>Inducción inmediata</strong> (oxitocina). No esperar &gt;12–18 h sin TdP para evitar corioamnionitis.</td></tr>
+  </tbody>
+</table>
+
+<div class="hosp-box">
+  <div class="hosp-title">🏥 Hospitalización — RPM</div>
+  <ul class="bl">
+    <li><strong>TODA RPM se hospitaliza</strong> al diagnóstico</li>
+    <li><strong>Corioamnionitis (Gibbs):</strong> fiebre &gt;38 °C + ≥2 de: taquicardia materna &gt;100 · taquicardia fetal &gt;160 · dolor uterino · secreción purulenta · leucocitosis → <strong>interrupción inmediata + ATB EV</strong> (Ampi + Genta + Clinda)</li>
+    <li>FIRS (síndrome respuesta inflamatoria fetal) → interrupción</li>
+    <li>Prolapso de cordón → cesárea de urgencia</li>
+  </ul>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 09. METRORRAGIA 2ª MITAD ══════════ -->
+<div class="sh"><span class="sn sn-r">09</span><h2 class="st st-r">Metrorragia 2ª Mitad — DPPNI · Placenta Previa · Vasa Previa</h2></div>
+
+<div class="two" style="margin-bottom:12px;">
+  <div class="cb cb-r">
+    <div class="cl cl-r">Etiologías Más Frecuentes</div>
+    <ul class="bl red tight">
+      <li>Placenta previa (~31%)</li>
+      <li>DPPNI (~22%)</li>
+      <li>Rotura uterina (más frecuente con cesárea previa)</li>
+      <li>Rotura de vasa previa (rara, mortalidad fetal alta)</li>
+      <li>No clasificable (~47%) — la más frecuente</li>
+      <li>Causas locales: cervicitis, pólipo, tapón mucoso, TdP</li>
+    </ul>
+  </div>
+  <div class="cb cb-r">
+    <div class="cl cl-r">Enfrentamiento General</div>
+    <ul class="bl red tight">
+      <li>EG · estado materno · LCF · tono uterino</li>
+      <li>Especuloscopía: magnitud y origen del sangrado</li>
+      <li><strong>EVITAR tacto vaginal hasta descartar PP</strong> (ecografía)</li>
+      <li>Eco: localización placentaria, LA, EPF, presentación</li>
+      <li>Lab: hemograma, coagulación, pruebas cruzadas, OC, fibrinógeno</li>
+      <li>Rh(–) sin Ig anti-D previa: profilaxis</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cl cl-r" style="margin-bottom:8px;">DPPNI vs Placenta Previa</div>
+<table class="pt red full">
+  <thead><tr><th>Característica</th><th>DPPNI</th><th>Placenta Previa</th></tr></thead>
+  <tbody>
+    <tr><td>Definición</td><td>Desprendimiento de placenta normoinserta antes del nacimiento</td><td>Placenta cubre total o parcialmente OCI</td></tr>
+    <tr><td>Dolor</td><td><strong>Sí — brusco e intenso</strong></td><td><strong>Indoloro</strong></td></tr>
+    <tr><td>Sangrado</td><td>Variable, puede ser oculto. Sangre oscura</td><td>Rojo brillante, externo, intermitente, autolimitado</td></tr>
+    <tr><td>Tono uterino</td><td><strong>Hipertonía / útero en tabla / leñoso</strong></td><td>Normal, blando</td></tr>
+    <tr><td>FR</td><td>HTA/PE, trauma abdominal, tabaco, cocaína, DPPNI previo, RPM, OHA descomp.</td><td>Cesárea previa (cicatriz uterina), legrados, edad ≥35, multiparidad, TRA, gemelar</td></tr>
+    <tr><td>Diagnóstico</td><td><strong>Clínico.</strong> Eco solo (–) en ~50%</td><td>Ecografía transvaginal (gold standard)</td></tr>
+    <tr><td>Complicaciones</td><td>CID, útero de Couvelaire, IRA, óbito, shock</td><td>Acretismo (especialmente con cesárea previa) → consultar Doppler</td></tr>
+    <tr><td>Conducta</td><td>Compromiso M/F → <strong>cesárea urgente</strong>. Estable + lejos del término → expectante con vigilancia</td><td>PP oclusiva → <strong>cesárea</strong> (36–37 sem electiva). PP marginal → eventual parto vaginal</td></tr>
+  </tbody>
+</table>
+
+<div class="ab red">
+  <div class="ai">⭐</div>
+  <div class="at"><strong>Vasa previa:</strong> vasos fetales sobre OCI, sin protección de placenta o cordón. Rotura → <strong>exsanguinación fetal en minutos</strong>. Diagnóstico antenatal con Doppler color → cesárea electiva 34–35 sem.</div>
+</div>
+
+<div class="cb cb-r" style="margin-top:12px;">
+  <div class="cl cl-r">Acretismo Placentario (Espectro PAS)</div>
+  <ul class="bl red tight">
+    <li><strong>Acreta</strong> (75%) → invade decidua basal · <strong>Increta</strong> (15%) → miometrio · <strong>Percreta</strong> (5–10%) → serosa o vejiga</li>
+    <li>FR principal: PP + cesárea previa (riesgo se acumula con n° de cesáreas)</li>
+    <li>Eco: lagunas placentarias, pérdida hipoecogénico retroplacentario, Doppler turbulento. RM si dudas</li>
+    <li>Manejo: <strong>cesárea-histerectomía planificada 34–36 sem</strong> en centro terciario, con banco de sangre</li>
+  </ul>
+</div>
+
+<div class="hosp-box">
+  <div class="hosp-title">🏥 Hospitalización — Metrorragia 2ª Mitad</div>
+  <ul class="bl">
+    <li><strong>Toda metrorragia significativa &gt;20 sem → hospitalización</strong></li>
+    <li>Sala si sangrado leve sin compromiso HDN; preparto si moderado-severo</li>
+    <li>Alta si ≥48 h sin sangrado + estabilidad HDN (PP marginal)</li>
+    <li><strong>Interrupción inmediata:</strong> compromiso HDN materno, sufrimiento fetal, DPPNI severo, corioamnionitis</li>
+    <li>Rh(–): profilaxis Ig anti-D (Kleihauer-Betke si sospecha hemorragia feto-materna)</li>
+  </ul>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 10. RCIU / PEG ══════════ -->
+<div class="sh"><span class="sn sn-gd">10</span><h2 class="st st-gd">RCIU / PEG — Defectos del Crecimiento Fetal</h2></div>
+
+<div class="q gold">
+  <div class="q-t">"Distinguir PEG (constitucional) de CIR (con compromiso funcional placentario) cambia totalmente el manejo."</div>
+  <div class="q-a">Protocolo Defectos del Crecimiento Fetal Barcelona · Manual UC 2026</div>
+</div>
+
+<div class="cl cl-gd" style="margin-bottom:8px;">Definiciones — Consenso Delphi (Barcelona)</div>
+<div class="three">
+  <div class="cb cb-gd">
+    <div class="cl cl-gd">PEG</div>
+    <div class="cc"><strong>PEF p3–p10</strong> con <strong>Doppler normal</strong> y crecimiento estable. Constitucional.</div>
+  </div>
+  <div class="cb cb-gd">
+    <div class="cl cl-gd">CIR Precoz (&lt;32 sem)</div>
+    <div class="cc">PEF &lt;p3 <em>o</em> PEF &lt;p10 + alteración Doppler (AUmb / IP útero / CPR). Causa placentaria. Peor pronóstico.</div>
+  </div>
+  <div class="cb cb-gd">
+    <div class="cl cl-gd">CIR Tardío (≥32 sem)</div>
+    <div class="cc">PEF &lt;p3 <em>o</em> PEF &lt;p10 + 2 hallazgos: caída &gt;2 cuartiles · IP AUmb &gt;p95 · CPR &lt;p5. Más frecuente (70%).</div>
+  </div>
+</div>
+
+<div class="cl cl-gd" style="margin:14px 0 8px;">Doppler — Parámetros y Conducta</div>
+<table class="pt gold full">
+  <thead><tr><th>Parámetro Doppler</th><th>Normal</th><th>Alterado</th><th>Conducta</th></tr></thead>
+  <tbody>
+    <tr><td>A. Umbilical (IP)</td><td>IP &lt;p95 · flujo (+) diastólico</td><td>IP &gt;p95</td><td>Vigilancia c/1–2 sem</td></tr>
+    <tr><td>A. Umbilical — AEDV</td><td>—</td><td>Diastólico ausente</td><td>Hospitalizar · corticoides · finalización 32–34 sem</td></tr>
+    <tr><td>A. Umbilical — REDV</td><td>—</td><td>Diastólico reverso</td><td><strong>Finalización urgente</strong> (≥30 sem)</td></tr>
+    <tr><td>A. Cerebral Media (IP)</td><td>Alta resistencia</td><td>IP &lt;p5 (vasodilatación = brain sparing)</td><td>Alerta — control más frecuente</td></tr>
+    <tr><td>Ratio Cerebro-Placentario (CPR)</td><td>&gt;p5</td><td>CPR &lt;p5</td><td>Marcador clave en CIR tardío · finalizar ≥37 sem</td></tr>
+    <tr><td>Ductus Venoso (onda a)</td><td>Onda a positiva</td><td>Onda a ausente o reversa</td><td><strong>Finalización en &lt;24 h</strong></td></tr>
+    <tr><td>IP medio Aa. Uterinas</td><td>&lt;p95</td><td>&gt;p95</td><td>Marcador placentación deficiente (apoyo DG)</td></tr>
+  </tbody>
+</table>
+
+<div class="cl cl-gd" style="margin:14px 0 8px;">Estadios CIR (Barcelona) y Finalización</div>
+<table class="pt gold">
+  <thead><tr><th>Estadio</th><th>Hallazgo</th><th>Vigilancia</th><th>Finalización</th></tr></thead>
+  <tbody>
+    <tr><td>I (PEG / CIR leve)</td><td>PEF &lt;p3 aislado o IP AUmb &gt;p95 / CPR &lt;p5 / IP útero &gt;p95</td><td>Semanal</td><td><strong>≥37 sem</strong> (vaginal posible)</td></tr>
+    <tr><td>II</td><td>AEDV en a. umbilical</td><td>Cada 2–3 días</td><td><strong>34 sem</strong> (cesárea habitual)</td></tr>
+    <tr><td>III</td><td>REDV o IP DV &gt;p95</td><td>Cada 24–48 h</td><td><strong>30 sem</strong> (cesárea)</td></tr>
+    <tr><td>IV</td><td>DV onda a ausente/reversa, RBNE patológico, PBF ≤4</td><td>Cada 12–24 h · UCI</td><td><strong>≥26 sem inmediato</strong> (cesárea, corticoides previos)</td></tr>
+  </tbody>
+</table>
+
+<div class="screen-box" style="margin-top:14px;">
+  <div class="screen-title">🔍 Tamizaje y Estudio</div>
+  <ul class="bl green tight">
+    <li>Altura uterina cada CPN — desfase &gt;3 cm o &lt;p10 en curva → ecografía</li>
+    <li>Eco morfológica 20–24 sem · biometría 28–32 sem · biometría 34–36 sem (todas las gestantes)</li>
+    <li>Doppler a partir de 28–30 sem si FR (HTA, DM, ERC, tabaco, RCIU previo, edad extrema)</li>
+    <li>Si PEF &lt;p10 → Doppler completo (AUmb, ACM, CPR, ductus, IP uterinas) + descartar etiología (infección · cromosómico · estructural)</li>
+  </ul>
+</div>
+
+<div class="hosp-box">
+  <div class="hosp-title">🏥 Cuándo Hospitalizar — RCIU</div>
+  <ul class="bl">
+    <li>CIR estadio II (AEDV) → hospitalizar + corticoides</li>
+    <li>CIR III (REDV) → finalización en horas</li>
+    <li>DV con onda a ausente/reversa → finalización &lt;24 h</li>
+    <li>PBF ≤4/10 o RBNE ominoso → finalización si viabilidad</li>
+    <li>CIR severo (&lt;p3) &lt;34 sem → hospitalizar + corticoides</li>
+  </ul>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 11. DOPPLER + LA ══════════ -->
+<div class="sh"><span class="sn sn-c">11</span><h2 class="st st-c">Doppler Fetal y Líquido Amniótico</h2></div>
+
+<div class="q purple">
+  <div class="q-t">"El Doppler fetal evalúa la adaptación hemodinámica fetal a la insuficiencia placentaria. El líquido amniótico es un marcador indirecto de bienestar."</div>
+  <div class="q-a">Protocolo Doppler Barcelona · Manual UC 2026</div>
+</div>
+
+<div class="cl cl-c" style="margin-bottom:8px;">Doppler — Esquema Fisiopatológico</div>
+<div class="cb cb-c">
+  <ul class="bl purple tight">
+    <li><strong>1° afectada:</strong> arteria umbilical (placenta) → ↑ IP → AEDV → REDV</li>
+    <li><strong>2° respuesta:</strong> redistribución cerebral → ↓ IP ACM (brain sparing) · ↓ CPR</li>
+    <li><strong>3° fase (preterminal):</strong> claudicación cardíaca → DV alterado · pulsaciones venosas umbilicales · RBNE patológico</li>
+    <li>El IP medio de las arterias uterinas evalúa la placentación (cribado PE/RCIU 1T y 2T)</li>
+  </ul>
+</div>
+
+<div class="cl cl-c" style="margin:14px 0 8px;">Líquido Amniótico — Medición y Alteraciones</div>
+<table class="pt purple full">
+  <thead><tr><th>Parámetro</th><th>Definición</th><th>Significado</th></tr></thead>
+  <tbody>
+    <tr><td>ILA (índice 4 cuadrantes)</td><td>Suma del bolsón vertical mayor de cada cuadrante</td><td>Normal: 8–18 cm · Limite: 5–8 / 18–25 · Alterado: &lt;5 o &gt;25</td></tr>
+    <tr><td>Bolsón vertical mayor (BVM)</td><td>Bolsón único más profundo libre de cordón</td><td>Normal: 2–8 cm · OHA: &lt;2 · PHA: &gt;8</td></tr>
+  </tbody>
+</table>
+
+<div class="two" style="margin-top:14px;">
+  <div class="cb cb-c">
+    <div class="cl cl-c">Oligohidramnios (OHA)</div>
+    <ul class="bl purple tight">
+      <li><strong>Causas:</strong> RPM (más frecuente), insuficiencia placentaria/RCIU, malformaciones renales (agenesia, displasia, obstrucción), CIR severo, postérmino, fármacos (IECA, AINES)</li>
+      <li><strong>Estudio:</strong> descartar RPM (cristalización, AmniSure), eco morfológica, Doppler, función renal fetal</li>
+      <li><strong>Manejo:</strong> tratar causa. Si término → interrumpir. Pretérmino → vigilancia + corticoides si EG &lt;34 sem</li>
+    </ul>
+  </div>
+  <div class="cb cb-c">
+    <div class="cl cl-c">Polihidramnios (PHA)</div>
+    <ul class="bl purple tight">
+      <li><strong>Causas:</strong> idiopático (60%), DM materna, malformaciones (atresia esofágica/duodenal, anencefalia), STFF (gemelar MC), infección (CMV, parvovirus), hidrops, isoinmunización</li>
+      <li><strong>Estudio:</strong> PTGO, eco morfológica detallada, TORCH, Coombs indirecto, eco fetal cardíaca</li>
+      <li><strong>Manejo:</strong> tratar causa. Severo sintomático: amniodrenaje. Indometacina &lt;32 sem (evitar cierre ductus)</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 12. INFECCIONES + SGB ══════════ -->
+<div class="sh"><span class="sn sn-g">12</span><h2 class="st st-g">Infecciones Perinatales — TORCH y SGB</h2></div>
+
+<div class="cl cl-g" style="margin-bottom:8px;">Cuadro General TORCH</div>
+<table class="pt green full">
+  <thead><tr><th>Infección</th><th>Tamizaje</th><th>Transmisión</th><th>Consecuencias</th><th>Tratamiento</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Sífilis (T. pallidum)</td>
+      <td>VDRL/RPR en CPN 1°T, 2°T y parto</td>
+      <td>Transplacentaria (cualquier T) · Mayor en latente tardía</td>
+      <td>Aborto, sífilis congénita (osteocondritis, hepato-esplenomegalia, rash, rinitis), MFIU</td>
+      <td><strong>Penicilina G benzatínica IM</strong> (sin alternativa en embarazo). Tratar pareja</td>
+    </tr>
+    <tr>
+      <td>Herpes (VHS-2)</td>
+      <td>No universal. Historia clínica</td>
+      <td>Canal del parto (primario activo: 50% riesgo). Transplacentaria rara</td>
+      <td>Herpes neonatal grave: encefalitis, diseminado (mortalidad alta)</td>
+      <td>Aciclovir 400 mg c/8 h desde sem 36 si recurrente. <strong>Cesárea si lesiones activas</strong></td>
+    </tr>
+    <tr>
+      <td>Rubéola</td>
+      <td>Serología 1°T · vacunar postparto si IgG (–)</td>
+      <td>Transplacentaria · mayor riesgo &lt;12 sem (85% sd. congénito)</td>
+      <td>Triada: cardiopatía + cataratas + sordera</td>
+      <td>Sin tto específico. Prevención: vacuna SR (no en embarazo)</td>
+    </tr>
+    <tr>
+      <td>Toxoplasmosis</td>
+      <td>Serología 1°T · repetir si (–) en 3°T</td>
+      <td>Transplacentaria · daño mayor 1°T · frecuencia mayor 3°T</td>
+      <td>Triada Sabin-Feldman: hidrocefalia + calcificaciones intracraneanas + coriorretinitis</td>
+      <td><strong>Espiramicina</strong> (↓ transmisión). Si infección fetal confirmada (PCR LA): Pirimetamina + Sulfadiazina + Ac. folínico</td>
+    </tr>
+    <tr>
+      <td>CMV</td>
+      <td>No tamizaje universal (controversia)</td>
+      <td>Transplacentaria · canal · LM. Primo-infección = mayor daño</td>
+      <td>Microcefalia, calcificaciones periventriculares, hipoacusia, retraso PSM</td>
+      <td>Sin tto comprobado en embarazo (valaciclovir 8 g/día en estudio). Prevención: higiene</td>
+    </tr>
+    <tr>
+      <td>VIH</td>
+      <td>ELISA 1°T y 3°T. Toda gestante</td>
+      <td>Transplacentaria, parto, lactancia. Riesgo total 20–25% sin tto</td>
+      <td>VIH neonatal</td>
+      <td><strong>TARV durante embarazo</strong> (objetivo CV indetectable). Cesárea electiva si CV &gt;1000 cop/mL en 36 sem. Suspender lactancia. Zidovudina al RN</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="cl cl-g" style="margin:16px 0 8px;">Streptococcus Grupo B (SGB) — Prevención de Sepsis Neonatal</div>
+<div class="two">
+  <div class="cb cb-g">
+    <div class="cl cl-g">Tamizaje Universal</div>
+    <ul class="bl green tight">
+      <li>Cultivo vagino-rectal a las <strong>35–37 sem</strong></li>
+      <li>(+) → profilaxis ATB intraparto</li>
+      <li>(–) o no tomado → profilaxis solo si FR</li>
+    </ul>
+  </div>
+  <div class="cb cb-g">
+    <div class="cl cl-g">Profilaxis Intraparto (IAP)</div>
+    <ul class="bl green tight">
+      <li><strong>Indicada si:</strong> cultivo (+) · bacteriuria SGB en este embarazo · RN previo con sepsis SGB · PP &lt;37 sem sin cultivo · RPM ≥18 h sin cultivo · fiebre intraparto ≥38 °C</li>
+      <li><strong>Penicilina G 5 mill U EV</strong> → 2.5 mill U c/4 h hasta el parto (1ª línea)</li>
+      <li>Alérgicos: <strong>Cefazolina</strong> 2 g EV → 1 g c/8 h (bajo riesgo anafilaxia) · <strong>Clindamicina/Vancomicina</strong> (alto riesgo)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ab">
+  <div class="ai">⚠️</div>
+  <div class="at"><strong>ITU por SGB durante el embarazo actual</strong> → profilaxis intraparto obligatoria (independiente del cultivo 35–37 sem). El antecedente de bacteriuria SGB cuenta como colonización.</div>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 13. EMBARAZO MÚLTIPLE ══════════ -->
+<div class="sh"><span class="sn sn-rs">13</span><h2 class="st st-rs">Embarazo Múltiple</h2></div>
+
+<div class="two">
+  <div class="cb cb-rs">
+    <div class="cl cl-rs">Clasificación por Corionicidad</div>
+    <ul class="bl rose tight">
+      <li><strong>Bicoriónico Biamniótico (BCBA):</strong> dicigotos (70%) o monocigotos &lt;3 días. 2 placentas, 2 sacos. Menor riesgo</li>
+      <li><strong>Monocoriónico Biamniótico (MCBA):</strong> monocigotos 4–8 días. Placenta única compartida → <strong>riesgo STFF</strong></li>
+      <li><strong>Monocoriónico Monoamniótico (MCMA):</strong> monocigotos 8–12 días. Riesgo entrelazamiento de cordones · alta morbimortalidad</li>
+      <li><strong>Siameses:</strong> &gt;12 días. Excepcional</li>
+    </ul>
+  </div>
+  <div class="cb cb-rs">
+    <div class="cl cl-rs">Diagnóstico de Corionicidad (10–14 sem)</div>
+    <div class="cc">
+      ✦ <strong>BCBA:</strong> signo λ (lambda / twin peak) — extensión placentaria triangular entre las membranas.<br>
+      ✦ <strong>MCBA:</strong> signo T — membrana delgada (2 capas) sin tejido placentario.<br>
+      ✦ Complemento: número de placentas · sacos · sexos fetales.
+    </div>
+  </div>
+</div>
+
+<div class="cl cl-rs" style="margin:14px 0 6px;">STFF — Síndrome de Transfusión Feto-Fetal (solo MCBA)</div>
+<div class="cb cb-rs">
+  <div class="cc">Desequilibrio hemodinámico por anastomosis placentarias arterio-venosas. <strong>Donante:</strong> RCIU + oligohidramnios (stuck twin). <strong>Receptor:</strong> PHA + cardiomegalia + hidrops.</div>
+  <table class="pt rose" style="margin-top:8px;">
+    <thead><tr><th>Estadio Quintero</th><th>Criterio</th></tr></thead>
+    <tbody>
+      <tr><td>I</td><td>PHA receptor (BVM &gt;8 cm) + OHA donante (BVM &lt;2 cm). Vejiga donante visible</td></tr>
+      <tr><td>II</td><td>Vejiga donante NO visible</td></tr>
+      <tr><td>III</td><td>Doppler anormal: AEDV/REDV AUmb · DV alterado · pulsaciones venosas</td></tr>
+      <tr><td>IV</td><td>Hidrops fetal</td></tr>
+      <tr><td>V</td><td>Muerte de uno o ambos fetos</td></tr>
+    </tbody>
+  </table>
+  <div class="bt" style="margin-top:8px;"><strong>Tratamiento STFF II–IV:</strong> fetoscopía con láser de las anastomosis (centro especializado). Estadio I: vigilancia estricta cada 1–2 sem.</div>
+</div>
+
+<div class="cl cl-rs" style="margin:14px 0 6px;">Otras Complicaciones Específicas (MC)</div>
+<ul class="bl rose tight" style="margin-bottom:10px;">
+  <li><strong>TAPS</strong> (anemia-policitemia): variante crónica del STFF · diferencia PSV ACM</li>
+  <li><strong>sIUGR</strong> (RCIU selectivo): un gemelo con RCIU. Tipos I, II, III según Doppler AUmb</li>
+  <li><strong>TRAP</strong> (perfusión arterial reversa): gemelo acárdico</li>
+  <li><strong>Muerte gemelar única en MC</strong>: 15% riesgo neurológico para el sobreviviente</li>
+</ul>
+
+<div class="cl cl-rs" style="margin:14px 0 6px;">Control Prenatal y Finalización</div>
+<table class="pt rose">
+  <thead><tr><th>Tipo</th><th>Inicio CPN</th><th>Frecuencia eco</th><th>Interrupción</th></tr></thead>
+  <tbody>
+    <tr><td>BCBA</td><td>Normal</td><td>Cada 4 sem desde 20 sem</td><td><strong>38 semanas</strong></td></tr>
+    <tr><td>MCBA</td><td>Centro terciario</td><td>Cada 2 sem desde 16 sem (vigilancia STFF + crecimiento + LA)</td><td><strong>36–37 sem</strong></td></tr>
+    <tr><td>MCMA</td><td>Centro especializado</td><td>Semanal o más</td><td><strong>32–34 sem</strong> (cesárea · hospitalizar antes)</td></tr>
+  </tbody>
+</table>
+
+<hr class="d">
+
+<!-- ══════════ 14. EHP / ISOINMUNIZACIÓN ══════════ -->
+<div class="sh"><span class="sn sn-o">14</span><h2 class="st st-o">Isoinmunización Rh / Enfermedad Hemolítica Perinatal (EHP)</h2></div>
+
+<div class="two">
+  <div class="cb cb-o">
+    <div class="cl cl-o">Definición</div>
+    <div class="cc">Madre Rh(–) sensibilizada (anti-D u otros Ac irregulares) que en embarazos posteriores transmite Ac IgG por placenta → hemólisis del feto Rh(+) → anemia fetal/neonatal, hidrops, MFIU, kernicterus.</div>
+  </div>
+  <div class="cb cb-o">
+    <div class="cl cl-o">Diagnóstico</div>
+    <ul class="bl orange tight">
+      <li>Grupo + Rh + Coombs Indirecto (CI) en 1° CPN a TODA gestante</li>
+      <li>Si Rh(–): <strong>CI seriado</strong> (1°T, 28 sem, parto)</li>
+      <li>CI (–) → profilaxis Ig anti-D</li>
+      <li>CI (+) → cuantificar título · si ≥1:16 → vigilancia con Doppler ACM</li>
+      <li><strong>Doppler ACM (PSV) &gt;1.5 MoM</strong> → anemia fetal moderada-severa</li>
+    </ul>
+  </div>
+</div>
+
+<div class="screen-box">
+  <div class="screen-title">💉 Profilaxis con Ig Anti-D (RhoGAM) — Madre Rh(–) no sensibilizada</div>
+  <div class="two">
+    <div>
+      <div class="cl cl-g" style="margin-bottom:4px;">Indicaciones Rutinarias</div>
+      <ul class="bl green tight">
+        <li><strong>Sem 28</strong> (profilaxis antenatal): 300 µg IM</li>
+        <li><strong>Postparto de RN Rh(+)</strong>: 300 µg IM en &lt;72 h</li>
+      </ul>
+    </div>
+    <div>
+      <div class="cl cl-g" style="margin-bottom:4px;">Eventos Sensibilizantes</div>
+      <ul class="bl green tight">
+        <li>Aborto · embarazo ectópico · mola</li>
+        <li>Metrorragia 2°-3°T · AMCT · BVC · cordocentesis</li>
+        <li>Trauma abdominal · versión externa</li>
+        <li>MFIU · óbito intrauterino</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="cl cl-o" style="margin:14px 0 6px;">Tratamiento EHP — Anemia Fetal</div>
+<div class="cb cb-o">
+  <div class="cc">
+    <strong>Anemia leve-moderada (PSV ACM 1.2–1.5 MoM):</strong> vigilancia Doppler c/1–2 sem.<br>
+    <strong>Anemia severa (PSV ACM &gt;1.5 MoM):</strong> confirmar con <strong>cordocentesis</strong>. Si Hb fetal &lt;7 g/dL o Ht &lt;30% → <strong>Transfusión Intrauterina (TIU)</strong> bajo eco (vena umbilical) — repetir cada 1–3 sem.<br>
+    <strong>Interrupción:</strong> ≥34 sem si requirió TIU · ≥37–38 sem en casos leves.
+  </div>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 15. POSTÉRMINO + MACROSOMÍA ══════════ -->
+<div class="sh"><span class="sn sn-gd">15</span><h2 class="st st-gd">Embarazo en Vías de Prolongación · Postérmino · Macrosomía</h2></div>
+
+<div class="two">
+  <div class="cb cb-gd">
+    <div class="cl cl-gd">Definiciones</div>
+    <ul class="bl gold tight">
+      <li><strong>A término:</strong> 37+0 a 41+6 sem</li>
+      <li><strong>En vías de prolongación:</strong> 41+0 a 41+6 sem</li>
+      <li><strong>Postérmino / prolongado:</strong> ≥42+0 sem</li>
+      <li>Confirmar EG con eco precoz (la FUR puede ser inexacta)</li>
+    </ul>
+  </div>
+  <div class="cb cb-gd">
+    <div class="cl cl-gd">Riesgos del Postérmino</div>
+    <ul class="bl gold tight">
+      <li>Insuficiencia placentaria → OHA, RCIU, sufrimiento fetal, MFIU</li>
+      <li>Macrosomía (en algunos), aspiración meconial, distocia hombros</li>
+      <li>Aumento mortalidad perinatal a partir de 41 sem</li>
+    </ul>
+  </div>
+</div>
+
+<div class="screen-box" style="margin-top:14px;">
+  <div class="screen-title">📅 Manejo</div>
+  <ul class="bl green tight">
+    <li><strong>40 sem:</strong> evaluar Bishop, ofrecer maniobra de Hamilton (separación de membranas)</li>
+    <li><strong>41 sem:</strong> RBNE + ILA · <strong>inducción 41+0 a 42+0 sem</strong> (mayor evidencia post-ARRIVE / SWEPIS)</li>
+    <li>OHA, RCIU, DM, PE → adelantar interrupción</li>
+    <li>Bishop favorable (≥6) → oxitocina · desfavorable → maduración cervical (PG E1/E2 o sonda Foley)</li>
+  </ul>
+</div>
+
+<div class="cl cl-gd" style="margin:14px 0 6px;">Macrosomía Fetal</div>
+<div class="two">
+  <div class="cb cb-gd">
+    <div class="cl cl-gd">Definición</div>
+    <ul class="bl gold tight">
+      <li><strong>PEF / peso al nacer ≥4000 g</strong> (o &gt;p90)</li>
+      <li>Macrosomía severa: ≥4500 g</li>
+      <li>FR: DM materna, obesidad, multiparidad, antecedente macrosómico, postérmino</li>
+    </ul>
+  </div>
+  <div class="cb cb-gd">
+    <div class="cl cl-gd">Riesgos y Manejo</div>
+    <ul class="bl gold tight">
+      <li>Distocia hombros, lesión plexo braquial, HPP, desgarros, asfixia</li>
+      <li>Cesárea electiva si <strong>PEF ≥4500 g (≥4250 g si DM)</strong></li>
+      <li>Preparación para distocia: maniobra McRoberts → Mazzanti → Rubin → Woods → Jaquemier</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 16. TRABAJO DE PARTO ══════════ -->
+<div class="sh"><span class="sn sn-p">16</span><h2 class="st st-p">Trabajo de Parto, Monitorización Fetal e Inducción</h2></div>
+
+<div class="cl cl-p" style="margin-bottom:8px;">Etapas del Trabajo de Parto</div>
+<table class="pt full">
+  <thead><tr><th>Fase</th><th>Definición</th><th>Duración esperada</th></tr></thead>
+  <tbody>
+    <tr><td>Latente (1ª parte de la 1ª etapa)</td><td>Inicio de DU regular hasta 6 cm</td><td>Variable, hasta 20 h en NP, 14 h en MP</td></tr>
+    <tr><td>Activa</td><td>6 cm → dilatación completa (10 cm)</td><td>≥0.5 cm/h NP · ≥1 cm/h MP</td></tr>
+    <tr><td>2ª etapa (expulsivo)</td><td>Dilatación completa → nacimiento</td><td>NP ≤2 h (3 h con epidural) · MP ≤1 h (2 h con epidural)</td></tr>
+    <tr><td>3ª etapa (alumbramiento)</td><td>Nacimiento → expulsión placenta</td><td>≤30 min (manejo activo)</td></tr>
+    <tr><td>4ª etapa (puerperio inmediato)</td><td>Primeras 2 h post-parto</td><td>Vigilancia estrecha — mayor riesgo HPP</td></tr>
+  </tbody>
+</table>
+
+<div class="cl cl-p" style="margin:14px 0 6px;">Monitorización Fetal Intraparto (MEFI / RBNE)</div>
+<table class="pt purple full">
+  <thead><tr><th>Parámetro</th><th>Normal</th><th>Alterado</th></tr></thead>
+  <tbody>
+    <tr><td>FCF basal</td><td>110–160 lpm</td><td>Bradicardia &lt;110 · Taquicardia &gt;160</td></tr>
+    <tr><td>Variabilidad</td><td>Moderada (6–25 lpm)</td><td>Mínima (&lt;5) · Ausente · Saltatoria (&gt;25)</td></tr>
+    <tr><td>Aceleraciones</td><td>≥15 lpm × 15 s</td><td>Ausencia (no necesariamente patológica intraparto)</td></tr>
+    <tr><td>Desaceleraciones precoces</td><td>Compresión cefálica · benignas</td><td>—</td></tr>
+    <tr><td>D. variables</td><td>Compresión de cordón</td><td>Si recurrentes &gt;50% · prolongadas → sospecha hipoxia</td></tr>
+    <tr><td>D. tardías</td><td>—</td><td><strong>Insuficiencia úteroplacentaria</strong> · siempre patológicas</td></tr>
+  </tbody>
+</table>
+
+<div class="cb cb-p" style="margin-top:12px;">
+  <div class="cl cl-p">Categorías ACOG</div>
+  <ul class="bl tight">
+    <li><strong>Categoría I (normal):</strong> FCF basal normal, variabilidad moderada, sin desaceleraciones tardías/variables, aceleraciones presentes/ausentes</li>
+    <li><strong>Categoría II (indeterminada):</strong> Manejo intra-parto activo, oxígeno materno, cambio de posición, evaluar progreso</li>
+    <li><strong>Categoría III (anormal):</strong> Variabilidad ausente + desaceleraciones tardías/variables recurrentes <em>o</em> bradicardia <em>o</em> patrón sinusoidal → <strong>cesárea de urgencia</strong></li>
+  </ul>
+</div>
+
+<div class="cl cl-p" style="margin:14px 0 6px;">Inducción y Maduración Cervical</div>
+<div class="two">
+  <div class="cb cb-p">
+    <div class="cl cl-p">Score de Bishop (≥6 = favorable)</div>
+    <table class="pt purple" style="margin:0;">
+      <thead><tr><th>Parámetro</th><th>0</th><th>1</th><th>2</th><th>3</th></tr></thead>
+      <tbody>
+        <tr><td>Dilatación</td><td>0</td><td>1–2</td><td>3–4</td><td>≥5</td></tr>
+        <tr><td>Borramiento</td><td>0–30%</td><td>40–50%</td><td>60–70%</td><td>≥80%</td></tr>
+        <tr><td>Estación</td><td>–3</td><td>–2</td><td>–1, 0</td><td>+1, +2</td></tr>
+        <tr><td>Consistencia</td><td>Firme</td><td>Media</td><td>Blanda</td><td>—</td></tr>
+        <tr><td>Posición</td><td>Posterior</td><td>Media</td><td>Anterior</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cb cb-p">
+    <div class="cl cl-p">Métodos de Inducción</div>
+    <ul class="bl tight">
+      <li><strong>Bishop favorable (≥6):</strong> oxitocina BIC + RAM cuando posible</li>
+      <li><strong>Bishop desfavorable:</strong> maduración primero
+        <ul style="margin-top:4px;">
+          <li>— PG E2 (dinoprostona) intravaginal/endocervical</li>
+          <li>— PG E1 (misoprostol) 25 µg vaginal c/4–6 h (off-label, dosis bajas)</li>
+          <li>— Sonda Foley intracervical (mecánico — opción si cesárea previa)</li>
+        </ul>
+      </li>
+      <li>RAM cuando dilatación &gt;3 cm</li>
+      <li><strong>Oxitocina BIC:</strong> 1–2 mU/min · ↑ cada 20–30 min hasta DU adecuada (3–5 c/10 min)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ab red">
+  <div class="ai">🚫</div>
+  <div class="at"><strong>CI absolutas inducción/PG:</strong> cesárea previa con incisión vertical, miomectomía con apertura cavidad, placenta previa, vasa previa, situación transversa, prolapso de cordón, herpes activo, sufrimiento fetal agudo. Misoprostol CI en cesárea previa (riesgo rotura uterina).</div>
+</div>
+
+<hr class="d">
+
+<!-- ══════════ 17. HPP ══════════ -->
+<div class="sh"><span class="sn sn-r">17</span><h2 class="st st-r">Hemorragia Post-Parto (HPP)</h2></div>
+
+<div class="q red">
+  <div class="q-t">"Principal causa obstétrica directa de muerte materna. 60% de los casos no tiene factores de riesgo identificables — toda paciente requiere vigilancia activa."</div>
+  <div class="q-a">Manual UC 2026 · Apuntes Internado 2025</div>
+</div>
+
+<div class="cb cb-r" style="margin-bottom:12px;">
+  <div class="cl cl-r">Definición</div>
+  <ul class="bl red tight">
+    <li>Pérdida <strong>&gt;500 mL</strong> en parto vaginal · <strong>&gt;1.000 mL</strong> en cesárea</li>
+    <li><strong>Clínicamente:</strong> pérdida que produce descompensación HDN — la definición más relevante</li>
+    <li>Precoz: &lt;24 h · Tardía: 24 h–6 sem postparto</li>
+  </ul>
+</div>
+
+<div class="cl cl-r" style="margin-bottom:8px;">Las 4T — Causas</div>
+<table class="pt red">
+  <thead><tr><th>Causa</th><th>%</th><th>Etiología / FR</th><th>Manejo Específico</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>🔴 Tono (Atonía)</td><td>70–90%</td>
+      <td>Sobredistensión (gemelar, PHA, macrosomía), TdP prolongado, gran multípara, IIA, miomatosis</td>
+      <td>Masaje uterino · oxitocina · metilergometrina · misoprostol · carbetocina · balón Bakri · B-Lynch · histerectomía</td>
+    </tr>
+    <tr>
+      <td>🔴 Tejidos</td><td>10%</td>
+      <td>Retención placenta/coágulos, placentación anormal (acreta/percreta)</td>
+      <td>Revisión instrumental · extracción manual · curetaje + ATB profiláctico (Cefazolina)</td>
+    </tr>
+    <tr>
+      <td>🔴 Trauma</td><td>20%</td>
+      <td>Laceraciones cuello/vagina/periné, rotura uterina, inversión uterina</td>
+      <td>Revisión canal de parto · sutura · reposición + nitroglicerina si inversión</td>
+    </tr>
+    <tr>
+      <td>🔴 Trombina</td><td>&lt;1%</td>
+      <td>CID (PE severa, DPPNI, embolia LA, óbito retenido), coagulopatías</td>
+      <td>Ácido tranexámico EV 1 g · hemoderivados · tratar causa</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="cl cl-r" style="margin:14px 0 6px;">Flujograma de Manejo</div>
+<div class="flow-row">
+  <div class="flow-step red">
+    <div class="flow-step-num">01</div>
+    <div class="flow-step-name">Sospechar y Pedir Ayuda</div>
+    <div class="flow-step-desc">Tomar el tiempo. Anestesiólogo + matrona + banco de sangre</div>
+  </div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step active">
+    <div class="flow-step-num">02</div>
+    <div class="flow-step-name">Resucitación</div>
+    <div class="flow-step-desc">2 VVP 14–16G · O₂ · cristaloides 1 L · Foley · 2 U GR si severo</div>
+  </div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step red">
+    <div class="flow-step-num">03</div>
+    <div class="flow-step-name">Ác. Tranexámico</div>
+    <div class="flow-step-desc">1 g EV en 100 mL — siempre, dentro de 3 h del inicio (estudio WOMAN)</div>
+  </div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step active">
+    <div class="flow-step-num">04</div>
+    <div class="flow-step-name">Buscar las 4T</div>
+    <div class="flow-step-desc">¿Útero retraído? ¿Placenta íntegra? ¿Canal de parto? ¿Coagulación?</div>
+  </div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step red">
+    <div class="flow-step-num">05</div>
+    <div class="flow-step-name">Tratar Causa</div>
+    <div class="flow-step-desc">Retractores · sutura · compresión · cirugía si necesario</div>
+  </div>
+</div>
+
+<div class="cl cl-r" style="margin:14px 0 6px;">Retractores Uterinos (Atonía) — Orden</div>
+<div class="three">
+  <div class="mc2">
+    <div class="mc2-h">1ª Línea</div>
+    <ul class="bl tight">
+      <li><strong>Oxitocina:</strong> 5 U EV bolo + 20 U en 1 L a 125–200 mL/h</li>
+      <li>Masaje uterino bimanual</li>
+      <li>Vaciar vejiga (sonda)</li>
+    </ul>
+  </div>
+  <div class="mc2">
+    <div class="mc2-h orange">2ª Línea</div>
+    <ul class="bl orange tight">
+      <li><strong>Metilergometrina:</strong> 0.2 mg IM (CI: HTA, PE)</li>
+      <li><strong>Misoprostol:</strong> 600–800 µg sublingual/rectal</li>
+      <li><strong>Carboprost (PGF2α):</strong> 0.25 mg IM (CI: asma)</li>
+      <li><strong>Carbetocina:</strong> 100 µg EV/IM (alternativa oxitocina)</li>
+    </ul>
+  </div>
+  <div class="mc2">
+    <div class="mc2-h red">3ª Línea — Quirúrgico</div>
+    <ul class="bl red tight">
+      <li>Balón de Bakri (taponamiento)</li>
+      <li>Suturas compresivas (B-Lynch, Hayman)</li>
+      <li>Ligadura de arterias uterinas / hipogástricas</li>
+      <li><strong>Histerectomía obstétrica</strong> como último recurso</li>
+    </ul>
+  </div>
+</div>
+
+<div class="screen-box">
+  <div class="screen-title">💊 Prevención HPP — Manejo Activo del Alumbramiento (MAA)</div>
+  <ul class="bl green tight">
+    <li><strong>Bajo riesgo:</strong> 5 U oxitocina EV bolo + 20 U en 1 L Ringer a 125–200 mL/h</li>
+    <li><strong>Alto riesgo:</strong> Lo mismo + Misoprostol 400–600 µg rectal o Carbetocina 100 µg</li>
+    <li>+ Tracción controlada del cordón + masaje uterino</li>
+    <li>Reduce HPP hasta 60%</li>
+  </ul>
+</div>
+
+<div class="page-num">Obstetricia · Resumen Internado · Mayo 2026 · Manual UC 2026 + Protocolos Medicina Fetal Barcelona ♥</div>
+
+</div></div>
+</body>
+</html>
